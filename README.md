@@ -141,6 +141,7 @@ src
 ## Post-MVP
 
 - _Contact form for users to ask questions to the grocer_
+- _admin acces to edit and delete products_
 
 ***
 
