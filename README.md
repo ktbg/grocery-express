@@ -133,7 +133,7 @@ src
 
 #### ERD Model
 
-![ERD Sample](https://github.com/ktbg/grocery-express/blob/main/images/P4.drawio.png)
+![ERD Sample](https://github.com/ktbg/grocery-express/blob/main/images/P4_ERD_v.2.png)
 <br>
 
 ***
