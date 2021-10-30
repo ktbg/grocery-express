@@ -1,4 +1,4 @@
-# grocery-express
+# Grocery Express
 
 - [Overview](#overview)
 - [MVP](#mvp)
