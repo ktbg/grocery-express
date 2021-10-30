@@ -31,17 +31,17 @@ The **Grocery Express** will take a client's grocery inventory and render it by 
 
 ### Goals
 
-- _Render inventory listed out by category: Produce, Meat, Seafood, Grocery, Dairy, Frozen
-- _User authentication
-- _User shopping cart for orders
-- _Full CRUD for the shopping cart
+- _Render inventory listed out by category: Produce, Meat, Seafood, Grocery, Dairy, Frozen_
+- _User authentication_
+- _User shopping cart for orders_
+- _Full CRUD for the shopping cart_
 
 ### Challenges
 
-- _Shopping cart
-  - _initialization timing 
-  - _dynamic quantity update
-  - _update persistence with page navigation and reflecting that in the UI 
+- _Shopping cart_
+  - _initialization timing_ 
+  - _dynamic quantity update_
+  - _update persistence with page navigation and reflecting that in the UI_ 
 
 <br>
 
@@ -93,8 +93,6 @@ The **Grocery Express** will take a client's grocery inventory and render it by 
 - Mobile Resource Index
 
 #### Component Tree
-
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
 
 [Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
 
