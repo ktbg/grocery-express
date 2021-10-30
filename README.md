@@ -142,6 +142,7 @@ src
 
 - _Contact form for users to ask questions to the grocer_
 - _admin acces to edit and delete products_
+- _modal to ask users not logged in to login or sign up_
 
 ***
 
