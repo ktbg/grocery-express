@@ -19,23 +19,29 @@
 
 ## Overview
 
-**Grocery Express** is an online marketplace providing a platform to offer online order for pick-up connecting local markets to customers
+**Grocery Express** is an online marketplace providing a platform to offer online order for in store pick-up and payment, adding convenience and connecting local markets to customers who may prefer online shopping to in store for time savings and/or health reasons.
 
 <br>
 
 ## MVP
 
-The **Grocery Express** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+The **Grocery Express** will take a client's grocery inventory and render it by category for users. Users will be able to browse all items without an account, allowing the market to showcase their offerings to a customers beyond existing users. Potential users are able to then create an account and begin adding things to their shopping cart. Existing users will have the ability to log in to create and update orders not sent. Items in a cart may be edited by quantity or deleted. Once the order is complete the users submit it to the store where it will be prepared for in store pick-up and payment. 
 
 <br>
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- _Render inventory listed out by category: Produce, Meat, Seafood, Grocery, Dairy, Frozen
+- _User authentication
+- _User shopping cart for orders
+- _Full CRUD for the shopping cart
+
+### Challenges
+
+- _Shopping cart
+  - _initialization timing 
+  - _dynamic quantity update
+  - _update persistence with page navigation and reflecting that in the UI 
 
 <br>
 
@@ -43,13 +49,16 @@ The **Grocery Express** MVP lorem ipsum dolor sit amet, consectetur adipiscing e
 
 > Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
 
-|     Library      | Description                                |
-| :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|     Library      | Description                                                  |
+| :--------------: | :----------------------------------------------------------- |
+|      React       | _A JavaScript library for creating user interfaces_          |
+|   React Router   | _Declarative routing for React_                              |
+| React Router DOM | _DOM bindings for React Router_                              |
+|      Axios       | _Promise based HTTP client for the browser and node.js_      |
+|     Node.js      | _JavaScript runtime_                                         |
+|  Ruby on Rails   | _Server-side MVC framework used for the back end_            |
+|     bcrypt       | _A simple wrapper for safely hashing and handling passwords_ |
+|      JWT         | _Ruby implementation of the RFC 7519 OAuth JWT_              |
 
 <br>
 
@@ -109,23 +118,22 @@ src
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
-
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
-
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
+| Task                         | Priority | Estimated Time | Time Invested | Actual Time |
+| ---------------------------- | :------: | :------------: | :-----------: | :---------: |
+| Back-end architecture        |    H     |     6 hrs      |         |       |
+| Seed Data                    |    H     |     2 hrs      |         |          |
+| React component architecture |    H     |     8 hrs      |         |          |
+| Back-end Route testing       |    H     |     1 hrs      |         |          |
+| Front-end Route testing      |    H     |     1 hrs      |         |          |
+| Shopping cart CRUD logic     |    H     |     6 hrs      |         |          |
+| CSS                          |    H     |     16 hrs      |         |          |
+| TOTAL                        |          |     42 hrs      |         |         |
 
 <br>
 
 ### Server (Back End)
 
 #### ERD Model
-
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 
 ![ERD Sample](https://github.com/ktbg/grocery-express/blob/main/images/P4.drawio.png)
 <br>
@@ -134,7 +142,7 @@ src
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+- _Contact form for users to ask questions to the grocer
 
 ***
 
