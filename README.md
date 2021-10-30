@@ -140,7 +140,7 @@ src
 
 ## Post-MVP
 
-- _Contact form for users to ask questions to the grocer
+- _Contact form for users to ask questions to the grocer_
 
 ***
 
