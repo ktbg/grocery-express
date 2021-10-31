@@ -59,6 +59,7 @@ The **Grocery Express** will take a client's grocery inventory and render it by 
 |  Ruby on Rails   | _Server-side MVC framework used for the back end_            |
 |     bcrypt       | _A simple wrapper for safely hashing and handling passwords_ |
 |      JWT         | _Ruby implementation of the RFC 7519 OAuth JWT_              |
+|  React Toastify  | _Library for user facing notifications_                      |
 
 <br>
 
