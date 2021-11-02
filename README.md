@@ -68,7 +68,7 @@ Client (Front End)
 | Ruby on Rails   | _Server-side MVC framework used for the back end_            |
 | bcrypt       | _A simple wrapper for safely hashing and handling passwords_ |
 | JWT         | _Ruby implementation of the RFC 7519 OAuth JWT_              |
-
+| PostgreSQL      | _Open source object-relational database_              |
 
 <br>
 
