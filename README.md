@@ -82,11 +82,11 @@ Client (Front End)
 
 - Tablet Landing
 
-![Tablet Home](https://github.com/ktbg/grocery-express/blob/main/Images/Home%20iPad%20Pro%2011_.png)
+![Tablet Home](https://github.com/ktbg/grocery-express/blob/main/Images/Home%20iPad%20Pro%2011_2.png)
 
 - Mobile Landing
 
-![Dummy Link](https://github.com/ktbg/grocery-express/blob/main/Images/Home%20-%20mobile.png)
+![Dummy Link](https://github.com/ktbg/grocery-express/blob/main/Images/Home%20-%20mobile2.png)
 
 - Desktop Product Category
 
