@@ -77,7 +77,7 @@ Client (Front End)
 
 #### Wireframes
 
-![Dummy Link](url)
+![Home](https://github.com/ktbg/grocery-express/blob/main/Images/Home.png)
 
 - Desktop Landing
 
