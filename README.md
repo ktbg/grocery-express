@@ -91,7 +91,7 @@ Client (Front End)
 
 - Desktop Product Category
 
-![Dummy Link](url)
+![Dummy Link](https://github.com/ktbg/grocery-express/blob/main/Images/Category.png)
 
 - Desktop Item Details
 
