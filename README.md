@@ -78,7 +78,7 @@ Client (Front End)
 
 - Desktop Landing
 
-![Home](https://github.com/ktbg/grocery-express/blob/main/Images/Home.png)
+![Home](https://github.com/ktbg/grocery-express/blob/main/Images/Home2.png)
 
 - Tablet Landing
 
