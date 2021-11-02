@@ -94,7 +94,7 @@ Client (Front End)
 
 - Desktop Item Details
 
-![Dummy Link](https://github.com/ktbg/grocery-express/blob/main/Images/Item%20Detail.png)
+![Dummy Link](https://github.com/ktbg/grocery-express/blob/main/Images/Item%20Detail2.png)
 
 - Desktop User Form
 
