@@ -19,8 +19,7 @@
 
 ## Overview
 
-**Grocery Express** is an online marketplace providing a platform to offer online order for in store pick-up and payment, adding convenience and connecting local markets to customers who may prefer online shopping to in store for time savings and/or health reasons.
-
+**Grocery Express** is an online marketplace providing a platform for users to view and rate foods. 
 <br>
 
 ## MVP
