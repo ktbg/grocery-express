@@ -105,11 +105,9 @@ Client (Front End)
 
 #### Component Tree
 
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
+![Grocery Express Component Tree](https://github.com/ktbg/grocery-express/blob/main/Images/Grocery%20Express.png)
 
 #### Component Architecture
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
 
 ``` structure
 
