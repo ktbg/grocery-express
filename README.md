@@ -77,29 +77,30 @@ Client (Front End)
 
 #### Wireframes
 
-![Home](https://github.com/ktbg/grocery-express/blob/main/Images/Home.png)
-
 - Desktop Landing
 
-![Tablet Home](https://github.com/ktbg/grocery-express/blob/main/Images/Home%20iPad%20Pro%2011_.png)
+![Home](https://github.com/ktbg/grocery-express/blob/main/Images/Home.png)
 
 - Tablet Landing
 
-![Dummy Link](url)
+![Tablet Home](https://github.com/ktbg/grocery-express/blob/main/Images/Home%20iPad%20Pro%2011_.png)
 
-- Resource Index
+- Mobile Landing
 
-![Dummy Link](url)
+![Dummy Link](https://github.com/ktbg/grocery-express/blob/main/Images/Home%20-%20mobile.png)
 
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
+- Desktop Product Category
 
 ![Dummy Link](url)
 
-- Mobile Resource Index
+- Desktop Item Details
+
+![Dummy Link](url)
+
+- Desktop User Form
+
+![Dummy Link](url)
+
 
 [Full Figma Wireframes](https://www.figma.com/file/kKXgk3BB49IpxAoZC2IqDG/grocery-express?node-id=0%3A1)
 
