@@ -1,18 +1,18 @@
 class UsersController < ApplicationController
-  # DUCHESS
-  # before_action :set_user, only: [:show, :update, :destroy]
+  # DUCHESS check for what to remove after postman testing
+  before_action :set_user, only: [:show, :update, :destroy]
 
   # GET /users
-  # def index
-  #   @users = User.all
+  def index
+    @users = User.all
 
-  #   render json: @users
-  # end
+    render json: @users
+  end
 
-  # # GET /users/1
-  # def show
-  #   render json: @user
-  # end
+  # GET /users/1
+  def show
+    render json: @user
+  end
 
   # POST /users
   def create
@@ -39,10 +39,10 @@ class UsersController < ApplicationController
   #   end
   # end
 
-  # # DELETE /users/1
-  # def destroy
-  #   @user.destroy
-  # end
+  # DELETE /users/1
+  def destroy
+    @user.destroy
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
