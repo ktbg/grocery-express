@@ -25,7 +25,19 @@
 
 ## MVP
 
-The **Grocery Express** will take a client's grocery inventory and render it by category for users. Users will be able to browse all items without an account, allowing the market to showcase their offerings to a customers beyond existing users. Potential users are able to then create an account and begin adding things to their shopping cart. Existing users will have the ability to log in to create and update orders not sent. Items in a cart may be edited by quantity or deleted. Once the order is complete the users submit it to the store where it will be prepared for in store pick-up and payment. 
+Server (Back End)
+- _Implement working generic controllers for full CRUD_
+- _Database with minimum 3 tables_
+- _Ruby on Rails server exposing RESTful JSON endpoints_
+
+Client (Front End)
+- _Have a working interactive React app built using `npx create-react-app`_
+- _Minimum 8 components and organized file structure_
+- _Consume data from the Ruby on Rails API and render that in the components_
+- _Utilize React-Router for client-side routing_
+- _Demonstrate full CRUD actions (`index`, `show`, `create`, `update`, and `delete`) on the front end
+- _Be styled with CSS and use flexbox or grid_
+- _Minimum 2 media queries for responsive design on three screen sizes_
 
 <br>
 
@@ -33,15 +45,12 @@ The **Grocery Express** will take a client's grocery inventory and render it by 
 
 - _Render inventory listed out by category: Produce, Meat, Seafood, Grocery, Dairy, Frozen_
 - _User authentication_
-- _User shopping cart for orders_
-- _Full CRUD for the shopping cart_
+- _Full CRUD for user ratings_
 
 ### Challenges
 
-- _Shopping cart_
-  - _initialization timing_ 
-  - _dynamic quantity update_
-  - _update persistence with page navigation and reflecting that in the UI_ 
+- _Database seed file build_
+- _Ratings CRUD_
 
 <br>
 
@@ -51,23 +60,22 @@ The **Grocery Express** will take a client's grocery inventory and render it by 
 
 |     Library      | Description                                                  |
 | :--------------: | :----------------------------------------------------------- |
-|      React       | _A JavaScript library for creating user interfaces_          |
-|   React Router   | _Declarative routing for React_                              |
+| React       | _A JavaScript library for creating user interfaces_          |
+| React Router   | _Declarative routing for React_                              |
 | React Router DOM | _DOM bindings for React Router_                              |
-|      Axios       | _Promise based HTTP client for the browser and node.js_      |
-|     Node.js      | _JavaScript runtime_                                         |
-|  Ruby on Rails   | _Server-side MVC framework used for the back end_            |
-|     bcrypt       | _A simple wrapper for safely hashing and handling passwords_ |
-|      JWT         | _Ruby implementation of the RFC 7519 OAuth JWT_              |
-|  React Toastify  | _Library for user facing notifications_                      |
+| Material Icons  | _Ready to use React icons_                                   |
+| Axios       | _Promise based HTTP client for the browser and node.js_      |
+| Node.js      | _JavaScript runtime_                                         |
+| Ruby on Rails   | _Server-side MVC framework used for the back end_            |
+| bcrypt       | _A simple wrapper for safely hashing and handling passwords_ |
+| JWT         | _Ruby implementation of the RFC 7519 OAuth JWT_              |
+
 
 <br>
 
 ### Client (Front End)
 
 #### Wireframes
-
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
 ![Dummy Link](url)
 
@@ -93,6 +101,8 @@ The **Grocery Express** will take a client's grocery inventory and render it by 
 
 - Mobile Resource Index
 
+[Full Figma Wireframes](https://www.figma.com/file/kKXgk3BB49IpxAoZC2IqDG/grocery-express?node-id=0%3A1)
+
 #### Component Tree
 
 [Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
@@ -105,27 +115,62 @@ The **Grocery Express** will take a client's grocery inventory and render it by 
 
 src
 |__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
+      |__ product_images
+          |__ produce
+          |__ meat
+          |__ seafood
+          |__ frozen
+          |__ grocery
+          |__ dairy
 |__ components/
-      |__ Header.jsx
+      |__ Nav.jsx
+      |__ NavLoggedIn.jsx
+      |__ NavLoggedOut.jsx
+      |__ Burger.jsx
+      |__ Menu.jsx
+      |__ Footer.jsx
+      |__ Button.jsx
+      |__ ProductCard.jsx
+      |__ StarRating.jsx
+|__ containers/
+      |__ MainContainer.jsx
+|__ screens/
+      |__ Home.jsx
+      |__ Category.jsx
+      |__ ItemDetails.jsx
+      |__ SignUp.jsx
+      |__ SignIn.jsx
+|__ layouts/
+      |__ Layout.jsx
 |__ services/
-
+      |__ apiConfig.js
+      |__ category.js
+      |__ products.js
+|__ App.js
+|__ Index.js
 ```
 
 #### Time Estimates
 
 | Task                         | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Back-end architecture        |    H     |     6 hrs      |         |       |
+| Back-end authentication      |    H     |     3 hrs      |         |       |
+| Back-end database set-up     |    H     |     4 hrs      |         |       |
 | Seed Data                    |    H     |     2 hrs      |         |          |
-| React component architecture |    H     |     8 hrs      |         |          |
-| Back-end Route testing       |    H     |     1 hrs      |         |          |
-| Front-end Route testing      |    H     |     1 hrs      |         |          |
-| Shopping cart CRUD logic     |    H     |     6 hrs      |         |          |
-| CSS                          |    H     |     16 hrs      |         |          |
+| React file structure         |    H     |     2 hrs      |         |          |
+| Front End user auth          |    H     |     2 hrs      |         |          |
+| Front product rendering      |    H     |     1 hrs      |         |          |
+| Star rating CRUD logic       |    H     |     3 hrs      |         |          |
+| Back-end Route testing       |    H     |     .5 hrs      |         |          |
+| Front-end Route testing      |    H     |     .5 hrs      |         |          |
+| CSS products page            |    H     |     2 hrs      |         |          |
+| CSS details page            |    H     |     2 hrs      |         |          |
+| CSS user forms pages        |    H     |     4 hrs      |         |          |
+| CSS home page                |    H     |     4 hrs      |         |          |
+| Shopping cart render logic   |    L   |     3 hrs      |         |          |
+| Shopping cart add logic      |    L   |     1 hrs      |         |          |
+| Shopping cart edit logic      |    L   |     5 hrs      |         |          |
+| Shopping cart nav logic       |    L     |     3 hrs      |         |          |
 | TOTAL                        |          |     42 hrs      |         |         |
 
 <br>
@@ -134,13 +179,14 @@ src
 
 #### ERD Model
 
-![ERD Sample](https://github.com/ktbg/grocery-express/blob/main/images/P4_ERD_v.2.png)
+![ERD Sample](https://github.com/ktbg/grocery-express/blob/main/Images/P4_ERD_v.4.png)
 <br>
 
 ***
 
 ## Post-MVP
 
+- _Shopping cart_
 - _Contact form for users to ask questions to the grocer_
 - _admin acces to edit and delete products_
 - _modal to ask users not logged in to login or sign up_
