@@ -1,6 +1,10 @@
 class StarRatingsController < ApplicationController
-  before_action :set_star_rating, only: [:show, :update, :destroy]
+  before_action :set_star_rating, only: :show
+  before_action :authorize_request, only: %i[create update destroy]
+  before_action :set_user_star_rating, only: %i[update destroy]
 
+  # DUCHESS - not a time where we need to see all star ratings as of yet
+  # when we do average rating there will be
   # GET /star_ratings
   def index
     @star_ratings = StarRating.all
@@ -16,7 +20,7 @@ class StarRatingsController < ApplicationController
   # POST /star_ratings
   def create
     @star_rating = StarRating.new(star_rating_params)
-
+    @star_rating.user = @current_user
     if @star_rating.save
       render json: @star_rating, status: :created, location: @star_rating
     else
@@ -39,13 +43,18 @@ class StarRatingsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_star_rating
-      @star_rating = StarRating.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def star_rating_params
-      params.require(:star_rating).permit(:rating, :user_id, :product_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_star_rating
+    @star_rating = StarRating.find(params[:id])
+  end
+  
+  def set_user_star_rating
+    @star_rating = @current_user.star_rating.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def star_rating_params
+    params.require(:star_rating).permit(:rating, :user_id, :product_id)
+  end
 end
