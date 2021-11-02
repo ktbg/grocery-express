@@ -177,7 +177,7 @@ src
 
 #### ERD Model
 
-![ERD Sample](https://github.com/ktbg/grocery-express/blob/main/Images/P4_ERD_v.4.png)
+![ERD Sample](https://github.com/ktbg/grocery-express/blob/main/Images/P4_ERD_v.6.png)
 <br>
 
 ***
