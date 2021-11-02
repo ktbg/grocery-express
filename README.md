@@ -81,9 +81,9 @@ Client (Front End)
 
 - Desktop Landing
 
-![Dummy Link](url)
+![Tablet Home](https://github.com/ktbg/grocery-express/blob/main/Images/Home%20iPad%20Pro%2011_.png)
 
-- Desktop Hero
+- Tablet Landing
 
 ![Dummy Link](url)
 
