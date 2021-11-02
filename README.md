@@ -82,7 +82,7 @@ Client (Front End)
 
 - Tablet Landing
 
-![Tablet Home](https://github.com/ktbg/grocery-express/blob/main/Images/Home%20iPad%20Pro%2011_2.png)
+![Tablet Home](https://github.com/ktbg/grocery-express/blob/main/Images/Home%20iPad%20Pro%2011_3.png)
 
 - Mobile Landing
 
