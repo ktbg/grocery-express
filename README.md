@@ -61,10 +61,8 @@ Client (Front End)
 | :--------------: | :----------------------------------------------------------- |
 | React       | _A JavaScript library for creating user interfaces_          |
 | React Router   | _Declarative routing for React_                              |
-| React Router DOM | _DOM bindings for React Router_                              |
 | Material Icons  | _Ready to use React icons_                                   |
 | Axios       | _Promise based HTTP client for the browser and node.js_      |
-| Node.js      | _JavaScript runtime_                                         |
 | Ruby on Rails   | _Server-side MVC framework used for the back end_            |
 | bcrypt       | _A simple wrapper for safely hashing and handling passwords_ |
 | JWT         | _Ruby implementation of the RFC 7519 OAuth JWT_              |
