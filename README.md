@@ -99,7 +99,7 @@ Client (Front End)
 
 - Desktop User Form
 
-![Dummy Link](url)
+![Dummy Link](https://github.com/ktbg/grocery-express/blob/main/Images/Sign%20Up.png)
 
 
 [Full Figma Wireframes](https://www.figma.com/file/kKXgk3BB49IpxAoZC2IqDG/grocery-express?node-id=0%3A1)
