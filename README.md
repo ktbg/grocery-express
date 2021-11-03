@@ -34,7 +34,7 @@ Client (Front End)
 - _Minimum 8 components and organized file structure_
 - _Consume data from the Ruby on Rails API and render that in the components_
 - _Utilize React-Router for client-side routing_
-- _Demonstrate full CRUD actions (`index`, `show`, `create`, `update`, and `delete`) on the front end
+- _Demonstrate full CRUD actions (`index`, `show`, `create`, `update`, and `delete`) on the front end_
 - _Be styled with CSS and use flexbox or grid_
 - _Minimum 2 media queries for responsive design on three screen sizes_
 
@@ -148,26 +148,26 @@ src
 
 #### Time Estimates
 
-| Task                         | Priority | Estimated Time | Time Invested | Actual Time |
-| ---------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Back-end authentication      |    H     |     3 hrs      |         |       |
-| Back-end database set-up     |    H     |     4 hrs      |         |       |
-| Seed Data                    |    H     |     2 hrs      |         |          |
-| React file structure         |    H     |     2 hrs      |         |          |
-| Front End user auth          |    H     |     2 hrs      |         |          |
-| Front product rendering      |    H     |     1 hrs      |         |          |
-| Star rating CRUD logic       |    H     |     3 hrs      |         |          |
-| Back-end Route testing       |    H     |     .5 hrs      |         |          |
-| Front-end Route testing      |    H     |     .5 hrs      |         |          |
-| CSS products page            |    H     |     2 hrs      |         |          |
-| CSS details page            |    H     |     2 hrs      |         |          |
-| CSS user forms pages        |    H     |     4 hrs      |         |          |
-| CSS home page                |    H     |     4 hrs      |         |          |
-| Shopping cart render logic   |    L   |     3 hrs      |         |          |
-| Shopping cart add logic      |    L   |     1 hrs      |         |          |
-| Shopping cart edit logic      |    L   |     5 hrs      |         |          |
-| Shopping cart nav logic       |    L     |     3 hrs      |         |          |
-| TOTAL                        |          |     42 hrs      |         |         |
+| Task                         | Priority | Estimated Time | Time Invested |
+| ---------------------------- | :------: | :------------: | :-----------: |
+| Back-end authentication      |    H     |     3 hrs      |     2 hrs    |       
+| Back-end database set-up     |    H     |     4 hrs      |     2 hrs    |       
+| Seed Data                    |    H     |     2 hrs      |    6 hrs     |          
+| React file structure         |    H     |     2 hrs      |         |          
+| Front End user auth          |    H     |     2 hrs      |         |         
+| Front product rendering      |    H     |     1 hrs      |         |          
+| Star rating CRUD logic       |    H     |     3 hrs      |         |          
+| Back-end Route testing       |    H     |     .5 hrs      |         |          
+| Front-end Route testing      |    H     |     .5 hrs      |         |          
+| CSS products page            |    H     |     2 hrs      |         |          
+| CSS details page            |    H     |     2 hrs      |         |          
+| CSS user forms pages        |    H     |     4 hrs      |         |          
+| CSS home page                |    H     |     4 hrs      |         |          
+| Shopping cart render logic   |    L   |     3 hrs      |         |          
+| Shopping cart add logic      |    L   |     1 hrs      |         |          
+| Shopping cart edit logic      |    L   |     5 hrs      |         |          
+| Shopping cart nav logic       |    L     |     3 hrs      |         |          
+| TOTAL                        |          |     42 hrs      |    10 hrs     |         
 
 <br>
 
