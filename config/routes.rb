@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   end
   
   resources :categories, only: [:index, :show] do
-    resources :products, only: [:index, :show] 
+    resources :products, only: :show
   end
 end
