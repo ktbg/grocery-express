@@ -140,7 +140,7 @@ src
       |__ Layout.jsx
 |__ services/
       |__ apiConfig.js
-      |__ category.js
+      |__ categories.js
       |__ products.js
 |__ App.js
 |__ Index.js

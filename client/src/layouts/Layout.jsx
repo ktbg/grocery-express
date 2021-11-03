@@ -2,11 +2,12 @@ import Nav from "../components/Nav"
 import Footer from "../components/Footer"
 import './Layout.css'
 
-const Layout = () => {
+const Layout = (props) => {
+  
   return (
     <div className="layout">
       <Nav />
-      Layout goes HERE
+      {props.children}
       <Footer />
     </div>
   )
