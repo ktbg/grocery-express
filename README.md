@@ -124,15 +124,18 @@ src
           |__ Button.jsx
       |__ CategoryBox
           |__ CategoryBox
-      |__ Nav.jsx
-      |__ NavLoggedIn.jsx
-      |__ NavLoggedOut.jsx
-      |__ Burger.jsx
-      |__ Menu.jsx
-      |__ Footer.jsx
-      |__ Button.jsx
-      |__ ProductCard.jsx
-      |__ StarRating.jsx
+      |__ Footer
+          |__ Footer.jsx
+      |__ Navbar
+          |__ Nav.jsx
+          |__ NavLoggedIn.jsx
+          |__ NavLoggedOut.jsx
+          |__ Burger.jsx
+          |__ Menu.jsx
+      |__ ProductCard
+          |__ ProductCard.jsx
+      |__ StarRating
+          |__ StarRating.jsx
 |__ containers/
       |__ MainContainer.jsx
 |__ screens/

@@ -4,4 +4,20 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color:black;
+}
+
+button {
+  cursor: pointer;
+  box-shadow: none;
+  border: none;
+  padding: 10px;
+}
+
 
