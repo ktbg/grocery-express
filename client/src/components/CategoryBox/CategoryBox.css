@@ -1,0 +1,38 @@
+.category-box-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 30px;
+}
+
+.category-box {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  background-size: cover;
+  color: white;
+}
+
+.Produce{
+  background-image: url('../../assets/images/jonathan-mast-ntjpaf3o-Bw-unsplash.jpg');
+}
+
+.Meat{
+  background-image: url('../../assets/images/max-delsid-oBwnHsjCx9A-unsplash.jpg');
+}
+
+.Seafood{
+  background-image: url('../../assets/images/david-todd-mccarty-Ih9HDG29afU-unsplash.jpg');
+}
+
+.Frozen{
+  background-image: url('../../assets/images/andris-romanovskis-WaPEDF_JwWE-unsplash.jpg');
+}
+
+.Grocery{
+  background-image: url('../../assets/images/yulia-khlebnikova-YRCTpi816ZA-unsplash.jpg');
+}
+
+.Refrigerated{
+  background-image: url('../../assets/images/estudio-gourmet-wiprNAISUaQ-unsplash.jpg');
+}

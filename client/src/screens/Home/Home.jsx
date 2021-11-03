@@ -1,5 +1,6 @@
 import './Home.css'
 import Button from '../../components/Button/Button';
+import CategoryBox from '../../components/CategoryBox/CategoryBox';
 
 const Home = (props) => {
   const { categories } = props;
@@ -11,10 +12,12 @@ const Home = (props) => {
           <p className='about-text'>Shop your local market from the comfort of your home and have your items ready for in store pick-up and payment.</p>
           <Button name='Browse Products' redirectLocation='/#categories' className="main"/>
         </div>
-        <div className='hero-img'>
-
+        <div className='hero-img-box'>
+          <div className='hero-img'></div>
         </div>
       </header>
+
+      {/* branding section */}
       <div className='branding'>
         <div className='branding-box'>
           <h4 className='branding-title'>Shop</h4>
@@ -29,8 +32,10 @@ const Home = (props) => {
           <p className='branding-text'>Pick up and pay for your ready-to-to order and be on your way!</p>
         </div>
       </div>
+      
+      {/* category boxes */}
       <div className='category-container' id='categories'>
-
+        <CategoryBox categories={categories} />
       </div>
     </div>
   )

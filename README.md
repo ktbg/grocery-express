@@ -120,6 +120,10 @@ src
           |__ grocery
           |__ dairy
 |__ components/
+      |__ Button
+          |__ Button.jsx
+      |__ CategoryBox
+          |__ CategoryBox
       |__ Nav.jsx
       |__ NavLoggedIn.jsx
       |__ NavLoggedOut.jsx
