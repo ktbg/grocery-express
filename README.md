@@ -61,6 +61,7 @@ Client (Front End)
 | :--------------: | :----------------------------------------------------------- |
 | React       | _A JavaScript library for creating user interfaces_          |
 | React Router   | _Declarative routing for React_                              |
+| React Router Hash Link   | _Package allowing scrolling to hash fragments in links_                              |
 | Material Icons  | _Ready to use React icons_                                   |
 | Axios       | _Promise based HTTP client for the browser and node.js_      |
 | Ruby on Rails   | _Server-side MVC framework used for the back end_            |
@@ -159,7 +160,7 @@ src
 | Front product rendering      |    H     |     1 hrs      |         |          
 | Star rating CRUD logic       |    H     |     3 hrs      |         |          
 | Back-end Route testing       |    H     |     .5 hrs      |         |          
-| Front-end Route testing      |    H     |     .5 hrs      |         |          
+| Front-end Route testing      |    H     |     .5 hrs      |    2 hr   |          
 | CSS products page            |    H     |     2 hrs      |         |          
 | CSS details page            |    H     |     2 hrs      |         |          
 | CSS user forms pages        |    H     |     4 hrs      |         |          

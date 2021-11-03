@@ -8,7 +8,7 @@ import { getAllRatings } from '../services/star-ratings'
 import CategoryDetails from '../screens/CategoryDetails'
 import ProductDetails from '../screens/ProductDetails'
 import Products from '../components/Products'
-import Home from '../screens/Home'
+import Home from '../screens/Home/Home'
 
 const MainContainer = () => {
   const [categories, setCategories] = useState([]);
