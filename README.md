@@ -133,15 +133,16 @@ src
 |__ screens/
       |__ Home.jsx
       |__ Category.jsx
-      |__ ItemDetails.jsx
+      |__ ProductDetails.jsx
       |__ Register.jsx
       |__ Login.jsx
 |__ layouts/
       |__ Layout.jsx
 |__ services/
-      |__ apiConfig.js
+      |__ api-config.js
       |__ categories.js
       |__ products.js
+      |__ star-ratings.js
 |__ App.js
 |__ Index.js
 ```

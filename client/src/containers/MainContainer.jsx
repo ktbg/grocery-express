@@ -1,15 +1,19 @@
 import { useState, useEffect } from 'react'
-import { Switch, Route, useHistory } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 
 import { getAllCategories } from '../services/categories'
 import { getAllProducts } from '../services/products'
+import { getAllRatings } from '../services/star-ratings'
 
-
+import CategoryDetails from '../screens/CategoryDetails'
+import ProductDetails from '../screens/ProductDetails'
+import Products from '../components/Products'
+import Home from '../screens/Home'
 
 const MainContainer = () => {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
-  const history = useHistory();
+  const [ratings, setRatings] = useState([]);
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -29,19 +33,29 @@ const MainContainer = () => {
     fetchProducts();
   }, [])
 
+  // star rating useEffect to send to the details page
+  useEffect(() => {
+    const fetchStarRatings = async () => {
+      const ratingsList = await getAllRatings();
+      console.log(ratingsList); //DUCHESS
+      setRatings(ratingsList);
+    }
+    fetchStarRatings();
+  }, [])
+
   return (
     <Switch>
       <Route path='/categories/:id/'>
-        <div>render all products for a given category</div>
+        <CategoryDetails products={products} />
       </Route>
       <Route path='/products/:id'>
-        product details screen
+        <ProductDetails products={products} ratings={ratings} />
       </Route>
       <Route path='/products'>
-        products component
+        <Products products={products} />
       </Route>
       <Route path='/'>
-        Home screen here
+        <Home categories={categories} />
       </Route>
     </Switch>
   )
