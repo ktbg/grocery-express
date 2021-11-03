@@ -3,11 +3,13 @@ import Footer from "../components/Footer"
 import './Layout.css'
 
 const Layout = (props) => {
-  
+
   return (
     <div className="layout">
       <Nav />
-      {props.children}
+        <div className="layout-children">
+          {props.children}
+        </div>
       <Footer />
     </div>
   )

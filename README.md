@@ -134,8 +134,8 @@ src
       |__ Home.jsx
       |__ Category.jsx
       |__ ItemDetails.jsx
-      |__ SignUp.jsx
-      |__ SignIn.jsx
+      |__ Register.jsx
+      |__ Login.jsx
 |__ layouts/
       |__ Layout.jsx
 |__ services/
@@ -153,8 +153,8 @@ src
 | Back-end authentication      |    H     |     3 hrs      |     2 hrs    |       
 | Back-end database set-up     |    H     |     4 hrs      |     2 hrs    |       
 | Seed Data                    |    H     |     2 hrs      |    6 hrs     |          
-| React file structure         |    H     |     2 hrs      |         |          
-| Front End user auth          |    H     |     2 hrs      |         |         
+| React file structure         |    H     |     2 hrs      |    2 hrs     |          
+| Front End user auth          |    H     |     2 hrs      |    1 hr     |         
 | Front product rendering      |    H     |     1 hrs      |         |          
 | Star rating CRUD logic       |    H     |     3 hrs      |         |          
 | Back-end Route testing       |    H     |     .5 hrs      |         |          

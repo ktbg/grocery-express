@@ -8,18 +8,22 @@ import {
   removeToken,
   verifyUser,
 } from "./services/auth";
+import Login from "./screens/Login";
+import Register from "./screens/Register";
+import MainContainer from "./containers/MainContainer";
+
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
   const history = useHistory();
 
-  useEffect(() => {
-    const handleVerify = async () => {
-      const userData = await verifyUser();
-      setCurrentUser(userData);
-    };
-    handleVerify();
-  }, []);
+  // useEffect(() => {
+  //   const handleVerify = async () => {
+  //     const userData = await verifyUser();
+  //     setCurrentUser(userData);
+  //   };
+  //   handleVerify();
+  // }, []);
 
   const handleLogin = async (formData) => {
     const userData = await loginUser(formData);
@@ -44,13 +48,13 @@ function App() {
       <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
           <Route path="/login">
-            login page
+            <Login handleLogin={handleLogin} />
           </Route>
           <Route path="/register">
-            register page
+            <Register handleRegister={handleRegister}/>
           </Route>
           <Route path="/">
-            container
+            <MainContainer />
           </Route>
         </Switch>
       </Layout>

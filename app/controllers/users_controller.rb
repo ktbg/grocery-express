@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   # DUCHESS check for what to remove after postman testing
-  before_action :set_user, only: [:show, :update, :destroy]
+  before_action :set_user, only: [:show, :update]
 
   # GET /users
   def index
@@ -40,9 +40,9 @@ class UsersController < ApplicationController
   # end
 
   # DELETE /users/1
-  def destroy
-    @user.destroy
-  end
+  # def destroy
+  #   @user.destroy
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
