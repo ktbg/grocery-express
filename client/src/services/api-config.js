@@ -1,6 +1,6 @@
 import axios from "axios";
 
-let apiUrl;
+
 
 //  DUCHESS might need to add /api after this possibly?
 // const apiUrls = {

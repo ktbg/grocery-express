@@ -9,7 +9,7 @@ const ProductCard = (props) => {
         <div className="product-img-container">
           <img
             className="product-img"
-            src={`${product.image}`}
+            src={require(`../../assets/images/products/${product.image}`).default}
             alt={product.name}
           />
         </div>
