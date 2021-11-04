@@ -1,0 +1,36 @@
+.details-container {
+  display: flex;
+  align-items: center;
+  
+}
+
+.details-left {
+  border-right: 1px solid black;
+}
+
+.details-right {
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+  margin-left: 24px;
+  height: 100%;
+  
+}
+
+.details-name {
+  font-size: 48px;
+  margin: 23px 0;
+}
+
+.rating {
+  margin-bottom: 77px;
+}
+
+.brand,
+.size,
+.price {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  margin-bottom: 19px;
+}
