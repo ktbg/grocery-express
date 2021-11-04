@@ -17,6 +17,8 @@ gem 'puma', '~> 5.0'
 gem 'bcrypt', '~> 3.1.7'
 # Use Json Web Token (JWT) for token based authentication
 gem 'jwt'
+# image helper for rails using react for use accessing asset pipeline images
+gem 'react-rails-img'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
