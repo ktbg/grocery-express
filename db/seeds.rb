@@ -41,8 +41,6 @@ puts "#{Category.count} categories created"
 @produce13 = Product.create!(name: 'Cilantro', price: '$1.39', size: '', uom: 'EA', image: 'Produce/cilantro.png', brand: '', category: @produce)
 @produce14 = Product.create!(name: 'Radish', price: '$1.69', size: '', uom: 'EA', image: 'Produce/radish.png', brand: '', category: @produce)
 @produce15 = Product.create!(name: 'Lemon', price: '$0.69', size: '', uom: 'EA', image: 'Produce/lemon.png', brand: '', category: @produce)
-
-# meat items
 @meat1 = Product.create!(name: 'Ground Beef', price: '$6.99', size: '', uom: 'LB', image: 'Meat/ground_beef.png', brand: '', category: @meat)
 @meat2 = Product.create!(name: 'Hot Dogs', price: '$6.99', size: '16', uom: 'OZ', image: 'Meat/hot_dogs.png', brand: 'Wellshire', category: @meat)
 @meat3 = Product.create!(name: 'Black Forest Bacon', price: '$8.99', size: '16', uom: 'OZ', image: 'Meat/black_forest_bacon.png', brand: 'Wellshire', category: @meat)
@@ -58,8 +56,6 @@ puts "#{Category.count} categories created"
 @meat13 = Product.create!(name: 'Grilled Chicken Breast', price: '$10.99', size: '', uom: 'LB', image: 'Meat/grilled_chicken_breast.png', brand: '', category: @meat)
 @meat14 = Product.create!(name: 'Beef Skirt Steak', price: '$10.99', size: '', uom: 'LB', image: 'Meat/skirt_steak.png', brand: '', category: @meat)
 @meat15 = Product.create!(name: 'Beef Tenderloin', price: '$29.99', size: '', uom: 'LB', image: 'Meat/tenderloin.png', brand: '', category: @meat)
-
-# seafood items
 @seafood1 = Product.create!(name: 'Salmon', price: '$9.99', size: '', uom: 'LB', image: 'Seafood/salmon.png', brand: '', category: @seafood)
 @seafood2 = Product.create!(name: 'Scallops', price: '$26.99', size: '', uom: 'LB', image: 'Seafood/scallops.png', brand: '', category: @seafood)
 @seafood3 = Product.create!(name: 'Atlantic Cod', price: '$12.99', size: '', uom: 'LB', image: 'Seafood/cod.png', brand: '', category: @seafood)
@@ -75,8 +71,6 @@ puts "#{Category.count} categories created"
 @seafood13 = Product.create!(name: 'Raw Shrimp', price: '$9.99', size: '', uom: 'LB', image: 'Seafood/raw_shrimp.png', brand: '', category: @seafood)
 @seafood14 = Product.create!(name: 'Squid Tube and Tentacle', price: '$7.49', size: '', uom: 'LB', image: 'Seafood/squid.png', brand: '', category: @seafood)
 @seafood15 = Product.create!(name: 'Branzini', price: '$13.99', size: '', uom: 'LB', image: 'Seafood/branzini.png', brand: '', category: @seafood)
-
-# refrigerated
 @refigerated1 = Product.create!(name: 'Whole Milk', price: '$3.99', size: '64', uom: 'FL OZ', image: 'Refrigerated/whole_milk.png', brand: 'Organic Valley', category: @refigerated)
 @refigerated2 = Product.create!(name: 'Half and Half', price: '$4.99', size: '32', uom: 'FL OZ', image: 'Refrigerated/half_and_half.png', brand: 'Organic Valley', category: @refigerated)
 @refigerated3 = Product.create!(name: 'Strawberry Greek Yogurt', price: '$1.99', size: '5.3', uom: 'OZ', image: 'Refrigerated/greek_yogurt_strawberry.png', brand: 'Fage', category: @refigerated)
@@ -92,8 +86,6 @@ puts "#{Category.count} categories created"
 @refigerated13 = Product.create!(name: 'Cream Cheese', price: '$2.99', size: '8', uom: 'OZ', image: 'Refrigerated/cream_cheese.png', brand: 'Organic Valley', category: @refigerated)
 @refigerated13 = Product.create!(name: 'Large Eggs', price: '$6.99', size: '18', uom: 'CT', image: 'Refrigerated/eggs.png', brand: 'Pete & Gerry\'s', category: @refigerated)
 @refigerated13 = Product.create!(name: 'Large Brown Eggs', price: '$5.99', size: '18', uom: 'CT', image: 'Refrigerated/brown_eggs.png', brand: 'Organic Valley', category: @refigerated)
-
-# grocery
 @grocery1 = Product.create!(name: 'Chickpea Penne Pasta', price: '$2.99', size: '8', uom: 'OZ', image: 'Grocery/penne.jpg', brand: 'Banza', category: @grocery)
 @grocery2 = Product.create!(name: 'Backyard Barbeque Chips', price: '$4.99', size: '13', uom: 'OZ', image: 'Grocery/bbq_chips.png', brand: 'Kettle Chips', category: @grocery)
 @grocery3 = Product.create!(name: 'Reduced Fat Kettle Cooked Chips', price: '$5.49', size: '14', uom: 'OZ', image: 'Grocery/cape_cod.png', brand: 'Cape Cod Chips', category: @grocery)
@@ -109,8 +101,6 @@ puts "#{Category.count} categories created"
 @grocery13 = Product.create!(name: 'Balsamic Vinaigrette', price: '$3.99', size: '16', uom: 'OZ', image: 'Grocery/balsamic_vinaigrette.png', brand: "Newman's Own", category: @grocery)
 @grocery14 = Product.create!(name: 'Extra Virgin Olive Oil', price: '$11.99', size: '25.4', uom: 'FL OZ', image: 'Grocery/olive_oil.png', brand: 'California Olive Ranch', category: @grocery)
 @grocery15 = Product.create!(name: 'Refried Beans', price: '$2.99', size: '15.4', uom: 'OZ', image: 'Grocery/refried_beans.png', brand: "Amy's Organic", category: @grocery)
-
-# frozen
 @frozen1 = Product.create!(name: 'Cauliflower Pizza Crust', price: '10.99', size: '2', uom: 'CT', image: 'Frozen/cauliflower_crust.png', brand: "Cauli'flour", category: @frozen)
 @frozen2 = Product.create!(name: 'Italian Beef Meatballs', price: '6.99', size: '16', uom: 'OZ', image: 'Frozen/meatballs.png', brand: 'Pineland Farms', category: @frozen)
 @frozen3 = Product.create!(name: 'Protein Toaster Waffles', price: '4.49', size: '6', uom: 'CT', image: 'Frozen/waffles.png', brand: 'Birch Benders', category: @frozen)
@@ -135,35 +125,30 @@ StarRating.create!(rating: 1, user: @user3, product: @produce1)
 StarRating.create!(rating: 2, user: @user3, product: @produce10)
 StarRating.create!(rating: 4, user: @user2, product: @produce6)
 StarRating.create!(rating: 0, user: @user1, product: @produce7)
-
 StarRating.create!(rating: 3, user: @user1, product: @seafood1)
 StarRating.create!(rating: 5, user: @user1, product: @seafood4)
 StarRating.create!(rating: 1, user: @user3, product: @seafood7)
 StarRating.create!(rating: 2, user: @user3, product: @seafood1)
 StarRating.create!(rating: 4, user: @user2, product: @seafood14)
 StarRating.create!(rating: 0, user: @user1, product: @seafood5)
-
 StarRating.create!(rating: 3, user: @user1, product: @meat1)
 StarRating.create!(rating: 5, user: @user1, product: @meat5)
 StarRating.create!(rating: 1, user: @user3, product: @meat8)
 StarRating.create!(rating: 2, user: @user3, product: @meat9)
 StarRating.create!(rating: 4, user: @user2, product: @meat9)
 StarRating.create!(rating: 0, user: @user1, product: @meat9)
-
 StarRating.create!(rating: 3, user: @user1, product: @refigerated10)
 StarRating.create!(rating: 5, user: @user1, product: @refigerated12)
 StarRating.create!(rating: 1, user: @user3, product: @refigerated12)
 StarRating.create!(rating: 2, user: @user3, product: @refigerated4)
 StarRating.create!(rating: 4, user: @user2, product: @refigerated6)
 StarRating.create!(rating: 0, user: @user1, product: @refigerated1)
-
 StarRating.create!(rating: 3, user: @user1, product: @grocery10)
 StarRating.create!(rating: 5, user: @user1, product: @grocery12)
 StarRating.create!(rating: 1, user: @user3, product: @grocery12)
 StarRating.create!(rating: 2, user: @user3, product: @grocery4)
 StarRating.create!(rating: 4, user: @user2, product: @grocery6)
 StarRating.create!(rating: 0, user: @user1, product: @grocery1)
-
 StarRating.create!(rating: 3, user: @user1, product: @frozen10)
 StarRating.create!(rating: 5, user: @user1, product: @frozen12)
 StarRating.create!(rating: 1, user: @user3, product: @frozen12)
