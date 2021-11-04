@@ -1,0 +1,11 @@
+button {
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.form {
+  width: 229px;
+  height: 43px;
+}

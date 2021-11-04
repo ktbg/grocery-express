@@ -34,7 +34,7 @@ Client (Front End)
 - _Minimum 8 components and organized file structure_
 - _Consume data from the Ruby on Rails API and render that in the components_
 - _Utilize React-Router for client-side routing_
-- _Demonstrate full CRUD actions (`index`, `show`, `create`, `update`, and `delete`) on the front end
+- _Demonstrate full CRUD actions (`index`, `show`, `create`, `update`, and `delete`) on the front end_
 - _Be styled with CSS and use flexbox or grid_
 - _Minimum 2 media queries for responsive design on three screen sizes_
 
@@ -61,6 +61,7 @@ Client (Front End)
 | :--------------: | :----------------------------------------------------------- |
 | React       | _A JavaScript library for creating user interfaces_          |
 | React Router   | _Declarative routing for React_                              |
+| React Router Hash Link   | _Package allowing scrolling to hash fragments in links_                              |
 | Material Icons  | _Ready to use React icons_                                   |
 | Axios       | _Promise based HTTP client for the browser and node.js_      |
 | Ruby on Rails   | _Server-side MVC framework used for the back end_            |
@@ -119,55 +120,60 @@ src
           |__ grocery
           |__ dairy
 |__ components/
-      |__ Nav.jsx
-      |__ NavLoggedIn.jsx
-      |__ NavLoggedOut.jsx
-      |__ Burger.jsx
-      |__ Menu.jsx
-      |__ Footer.jsx
       |__ Button.jsx
+      |__ CategoryBox
+      |__ Footer.jsx
+      |__ Navbar
+          |__ Nav.jsx
+          |__ NavLoggedIn.jsx
+          |__ NavLoggedOut.jsx
+          |__ Burger.jsx
+          |__ Menu.jsx
       |__ ProductCard.jsx
       |__ StarRating.jsx
 |__ containers/
       |__ MainContainer.jsx
 |__ screens/
       |__ Home.jsx
-      |__ Category.jsx
-      |__ ItemDetails.jsx
-      |__ SignUp.jsx
-      |__ SignIn.jsx
+      |__ CategoryDetails.jsx
+      |__ Login.jsx
+      |__ ProductDetails.jsx
+      |__ Register.jsx
 |__ layouts/
       |__ Layout.jsx
 |__ services/
-      |__ apiConfig.js
-      |__ category.js
+      |__ api-config.js
+      |__ categories.js
       |__ products.js
+      |__ star-ratings.js
 |__ App.js
 |__ Index.js
 ```
 
 #### Time Estimates
 
-| Task                         | Priority | Estimated Time | Time Invested | Actual Time |
-| ---------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Back-end authentication      |    H     |     3 hrs      |         |       |
-| Back-end database set-up     |    H     |     4 hrs      |         |       |
-| Seed Data                    |    H     |     2 hrs      |         |          |
-| React file structure         |    H     |     2 hrs      |         |          |
-| Front End user auth          |    H     |     2 hrs      |         |          |
-| Front product rendering      |    H     |     1 hrs      |         |          |
-| Star rating CRUD logic       |    H     |     3 hrs      |         |          |
-| Back-end Route testing       |    H     |     .5 hrs      |         |          |
-| Front-end Route testing      |    H     |     .5 hrs      |         |          |
-| CSS products page            |    H     |     2 hrs      |         |          |
-| CSS details page            |    H     |     2 hrs      |         |          |
-| CSS user forms pages        |    H     |     4 hrs      |         |          |
-| CSS home page                |    H     |     4 hrs      |         |          |
-| Shopping cart render logic   |    L   |     3 hrs      |         |          |
-| Shopping cart add logic      |    L   |     1 hrs      |         |          |
-| Shopping cart edit logic      |    L   |     5 hrs      |         |          |
-| Shopping cart nav logic       |    L     |     3 hrs      |         |          |
-| TOTAL                        |          |     42 hrs      |         |         |
+| Task                         | Priority | Estimated Time | Time Invested |
+| ---------------------------- | :------: | :------------: | :-----------: |
+| Back-end authentication      |    H     |     3 hrs      |     2 hrs    |       
+| Back-end database set-up     |    H     |     4 hrs      |     2 hrs    |       
+| Seed Data                    |    H     |     2 hrs      |    6 hrs     |          
+| React file structure         |    H     |     2 hrs      |    2 hrs     |  
+| React screens                |    H     |     4 hrs      |    2 hrs     | 
+| React components           |    H     |     8 hrs      |    6 hrs     |         
+| Front End user auth          |    H     |     2 hrs      |    1 hr     |         
+| Front product rendering      |    H     |     1 hrs      |         |          
+| Star rating CRUD logic       |    H     |     3 hrs      |         |          
+| Back-end Route testing       |    H     |     .5 hrs      |         |          
+| Front-end Route testing      |    H     |     .5 hrs      |    2 hr   |          
+| CSS products page            |    H     |     2 hrs      |         |          
+| CSS details page            |    H     |     2 hrs      |         |          
+| CSS user forms pages        |    H     |     4 hrs      |         |          
+| CSS home page                |    H     |     4 hrs      |         |          
+| Shopping cart render logic   |    L   |     3 hrs      |         |          
+| Shopping cart add logic      |    L   |     1 hrs      |         |          
+| Shopping cart edit logic      |    L   |     5 hrs      |         |          
+| Shopping cart nav logic       |    L     |     3 hrs      |         |          
+| TOTAL                        |          |     54 hrs      |    23 hrs     |         
 
 <br>
 

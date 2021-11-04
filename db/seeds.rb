@@ -26,8 +26,8 @@ puts "#{User.count} users created"
 puts "#{Category.count} categories created"
 
 # produce items
-@produce1 = Product.create!(name: 'Avocado', price: '$1.99', size: '', uom: 'EA', image: '../client/src/assets/product_images/Produce/avocado.png', brand: '', category: @produce)
-@produce2 = Product.create!(name: 'Honeycrisp Apple', price: '$3.49', size: '', uom: 'LB', image: '../client/src/assets/product_images/Produce/honeycrisp_apple.png', brand: '', category: @produce)
+@produce1 = Product.create!(name: 'Avocado', price: '$1.99', size: '', uom: 'EA', image: 'Produce/avocado.png', brand: '', category: @produce)
+@produce2 = Product.create!(name: 'Honeycrisp Apple', price: '$3.49', size: '', uom: 'LB', image: '../../assets/product_images/Produce/honeycrisp_apple.png', brand: '', category: @produce)
 @produce3 = Product.create!(name: 'Banana', price: '$0.49', size: '', uom: 'LB', image: '../client/src/assets/product_images/Produce/banana.png', brand: '', category: @produce)
 @produce4 = Product.create!(name: 'Cauliflower', price: '$3.49', size: '', uom: 'EA', image: '../client/src/assets/product_images/Produce/cauliflower.png', brand: '', category: @produce)
 @produce5 = Product.create!(name: 'Red Onion', price: '$0.99', size: '', uom: 'LB', image: '../client/src/assets/product_images/Produce/red_onion.png', brand: '', category: @produce)

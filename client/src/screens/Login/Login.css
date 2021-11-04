@@ -1,0 +1,11 @@
+.sign-in-container {
+  border: 1px solid black;
+  width: 309px;
+  height: 480px;
+  margin: 0 auto;
+}
+
+.sign-in-form {
+  margin-top: 56px;
+}
+
