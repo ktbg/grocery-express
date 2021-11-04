@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 
 const ProductCard = (props) => {
@@ -18,9 +17,7 @@ const ProductCard = (props) => {
           <p>{product.name}</p>
           <p>{product.price}</p>
         </div>
-        <Link to={`/products/${product.id}`}>
-          <Button name="details" redirectLocation={`/products/${product.id}`} />
-        </Link>
+        <Button name="details" redirectLocation={`/products/${product.id}`} />
       </div>
     </>
   );
