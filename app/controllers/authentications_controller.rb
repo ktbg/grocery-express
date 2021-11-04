@@ -12,6 +12,7 @@ class AuthenticationsController < ApplicationController
         }, status: :ok
     else
       render json: { errors: 'unauthorized' }, status: :unauthorized
+      # render json: { errors: @model.errors.full_messages }
     end
   end
   

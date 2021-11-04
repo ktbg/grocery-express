@@ -10,7 +10,8 @@ span.chevron {
   position: absolute;
   bottom: 0;
 } */
-input {
+input, 
+.input-field {
   display: block;
   margin: 36px auto;
   width: 229px;
@@ -19,4 +20,19 @@ input {
   border-radius: 5px;
   border: 1px solid #C4C4C4;
   padding-left: 18px;
+}
+
+.input-field {
+  padding: 10px 18px;
+  text-align: center;
+}
+
+.user-form-button {
+  width: 229px;
+  height: 43px;
+}
+.danger {
+  color: red;
+  width: 229px;
+  margin: 0 auto;
 }

@@ -1,7 +1,6 @@
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { Link } from 'react-router-dom'
 import { useState } from "react";
-import Button from '../../components/Button/Button'
 import './Login.css'
 import '../../App.css'
 
@@ -12,7 +11,7 @@ const Login = (props) => {
       });
 
   const { email, password } = formData;
-  const { handleLogin } = props;
+  const { handleLogin, incorrectLogin } = props;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,6 +35,7 @@ const Login = (props) => {
         onSubmit={(e) => {
           e.preventDefault();
           handleLogin(formData);
+          // console.log(loggedIn)
         }}
       >
         <label>
@@ -56,7 +56,8 @@ const Login = (props) => {
             onChange={handleChange}
           />
         </label>
-        <Button redirectLocation="/" name="Sign In" className="form"/>
+        {incorrectLogin ? <p className="danger">Email or password provided do not match</p> : null}
+        <button className="user-form-button">Submit</button>
       </form>
     </div>
   );

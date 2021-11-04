@@ -5,6 +5,7 @@ import "./Layout.css";
 const Layout = (props) => {
   const { currentUser, handleLogout } = props;
   
+     
   return (
     <div className="layout">
       <Nav currentUser={currentUser} handleLogout={handleLogout}/>

@@ -14,6 +14,7 @@ import MainContainer from "./containers/MainContainer";
 
 
 function App() {
+  const [incorrectLogin, setIncorrectLogin] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
   const history = useHistory();
 
@@ -27,8 +28,12 @@ function App() {
 
   const handleLogin = async (formData) => {
     const userData = await loginUser(formData);
-    setCurrentUser(userData);
-    history.push("/");
+    if (userData){
+      setIncorrectLogin(false);
+      setCurrentUser(userData);
+      history.push("/");
+    }
+    setIncorrectLogin(true)
   };
 
   const handleRegister = async (formData) => {
@@ -48,7 +53,7 @@ function App() {
       <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
           <Route path="/login">
-            <Login handleLogin={handleLogin} />
+            <Login handleLogin={handleLogin} incorrectLogin={incorrectLogin}/>
           </Route>
           <Route path="/register">
             <Register handleRegister={handleRegister}/>

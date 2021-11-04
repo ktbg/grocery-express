@@ -1,10 +1,11 @@
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { Link } from 'react-router-dom'
 import { useState } from "react";
-import Button from '../../components/Button/Button'
 import '../../App.css'
+import './Register.css'
 
 const Register = (props) => {
+  const [passwordError, setPasswordError] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -21,6 +22,15 @@ setFormData((prevState) => ({
   [name]: value,
 }));
 };
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  if (formData.password.length < 6){
+    setPasswordError(true)
+  }
+  handleRegister(formData);
+}
+
   return (
     <div className="sign-in-container">
     <h3 className="form-title">Sign Up</h3>
@@ -32,10 +42,7 @@ setFormData((prevState) => ({
     </p>
     <form
       className="sign-up-form"
-      onSubmit={(e) => {
-        e.preventDefault();
-        handleRegister(formData);
-      }}
+      onSubmit={handleSubmit}
     >
       <label>
         <input
@@ -44,6 +51,7 @@ setFormData((prevState) => ({
           value={name}
           placeholder="name"
           onChange={handleChange}
+          required
         />
       </label>
       <label>
@@ -53,18 +61,25 @@ setFormData((prevState) => ({
           value={email}
           placeholder="email"
           onChange={handleChange}
+          required
         />
       </label>
-      <label>
+      {/* DUCHESS */}
         <input
           type="password"
           name="password"
+          variant="outlined"
           value={password}
           placeholder="password"
+          required
           onChange={handleChange}
         />
-      </label>
-      <Button redirectLocation="/" name="Sign In" className="form"/>
+        <div>
+        {passwordError ? <p className="danger">Password must be minimum 6 characters in length</p> : null}
+        </div>
+      {/* </label> */}
+      {/* <Button redirectLocation="/" name="Sign Up" className="form"/> */}
+      <button className="user-form-button">Submit</button>
     </form>
   </div>
   )
