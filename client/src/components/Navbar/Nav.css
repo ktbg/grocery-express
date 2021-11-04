@@ -15,9 +15,10 @@ nav {
   display: flex;
   justify-content: space-between;
   padding-bottom: 2px;
-  width: 20%;
+  width: 30%;
   font-family: 'Open Sans', sans-serif;
 }
+
 
 .burger {
   display: none;

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import NavLoggedIn from "./NavLoggedIn";
 import NavLoggedOut from "./NavLoggedOut";
@@ -10,12 +10,12 @@ const Nav = (props) => {
 
   return (
     <nav>
-      <Link to="/" className="nav-brand">
+      <NavLink to="/" className="nav-brand">
         Grocery Express
-      </Link>
+      </NavLink>
       <div className="nav-right">
         <HashLink to="/#categories">Departments</HashLink>
-        {currentUser ? (
+        { currentUser ? (
           <NavLoggedIn handleLogout={handleLogout} />
         ) : (
           <NavLoggedOut />

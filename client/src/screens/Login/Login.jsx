@@ -1,4 +1,5 @@
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { Link } from 'react-router-dom'
 import { useState } from "react";
 import Button from '../../components/Button/Button'
 import './Login.css'
@@ -25,10 +26,10 @@ const Login = (props) => {
     <div className="sign-in-container">
       <h3 className="form-title">Sign In</h3>
       <p className="form-helper">
-        New to Grocery Express? Sign Up{" "}
+        New to Grocery Express? <Link to='/register'>Sign Up
         <span className="chevron">
           <ChevronRightIcon color="black" />
-        </span>
+        </span></Link>
       </p>
       <form
         className="sign-in-form"

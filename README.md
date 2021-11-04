@@ -159,7 +159,7 @@ src
 | Seed Data                    |    H     |     2 hrs      |    6 hrs     |          
 | React file structure         |    H     |     2 hrs      |    2 hrs     |  
 | React screens                |    H     |     4 hrs      |    2 hrs     | 
-| React components           |    H     |     8 hrs      |    4 hrs     |         
+| React components           |    H     |     8 hrs      |    6 hrs     |         
 | Front End user auth          |    H     |     2 hrs      |    1 hr     |         
 | Front product rendering      |    H     |     1 hrs      |         |          
 | Star rating CRUD logic       |    H     |     3 hrs      |         |          
@@ -173,7 +173,7 @@ src
 | Shopping cart add logic      |    L   |     1 hrs      |         |          
 | Shopping cart edit logic      |    L   |     5 hrs      |         |          
 | Shopping cart nav logic       |    L     |     3 hrs      |         |          
-| TOTAL                        |          |     54 hrs      |    10 hrs     |         
+| TOTAL                        |          |     54 hrs      |    23 hrs     |         
 
 <br>
 

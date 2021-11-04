@@ -1,10 +1,12 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import './Nav.css'
 
 const NavLoggedOut = () => {
   return (
-    <div>
-      <Link to='/login'>Sign In</Link>
-    </div>
+    <>
+      <NavLink to='/login'>Sign In</NavLink>
+      <NavLink to='/register'>Sign Up</NavLink>
+    </>
   )
 }
 

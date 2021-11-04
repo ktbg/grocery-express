@@ -3,12 +3,12 @@ import Footer from "../components/Footer/Footer";
 import "./Layout.css";
 
 const Layout = (props) => {
-
+  const { currentUser, handleLogout } = props;
   
   return (
     <div className="layout">
-      <Nav />
-      <div className="layout-children">{props.children}</div>
+      <Nav currentUser={currentUser} handleLogout={handleLogout}/>
+        <div className="layout-children">{props.children}</div>
       <Footer />
     </div>
   );
