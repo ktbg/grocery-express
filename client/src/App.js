@@ -8,8 +8,8 @@ import {
   removeToken,
   verifyUser,
 } from "./services/auth";
-import Login from "./screens/Login";
-import Register from "./screens/Register";
+import Login from "./screens/Login/Login";
+import Register from "./screens/Register/Register";
 import MainContainer from "./containers/MainContainer";
 
 

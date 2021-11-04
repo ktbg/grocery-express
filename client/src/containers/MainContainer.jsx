@@ -5,9 +5,9 @@ import { getAllCategories } from '../services/categories'
 import { getAllProducts } from '../services/products'
 import { getAllRatings } from '../services/star-ratings'
 
-import CategoryDetails from '../screens/CategoryDetails'
-import ProductDetails from '../screens/ProductDetails'
-import Products from '../components/Products'
+import CategoryDetails from '../screens/CategoryDetails/CategoryDetails'
+import ProductDetails from '../screens/ProductDetails/ProductDetails'
+import Products from '../components/ProductCard/ProductCard'
 import Home from '../screens/Home/Home'
 
 const MainContainer = () => {
@@ -46,14 +46,15 @@ const MainContainer = () => {
   return (
     <Switch>
       <Route path='/categories/:id/'>
-        <CategoryDetails products={products} />
+        <CategoryDetails categories={categories} products={products} />
       </Route>
       <Route path='/products/:id'>
         <ProductDetails products={products} ratings={ratings} />
       </Route>
-      <Route path='/products'>
+      {/* DUCHESS - may not need the route below */}
+      {/* <Route path='/products'>
         <Products products={products} />
-      </Route>
+      </Route> */}
       <Route path='/'>
         <Home categories={categories} />
       </Route>

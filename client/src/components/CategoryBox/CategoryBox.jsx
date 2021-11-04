@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './CategoryBox.css'
 
 const CategoryBox = (props) => {
@@ -7,9 +8,11 @@ const CategoryBox = (props) => {
     <div className='category-box-group'>
       {categories.map((category) => 
         (
-          <div className={`category-box ${category.category}`} key={category.id} >
-            <h3>{category.category}</h3>
-          </div>
+          <Link key={category.id} to={`/categories/${category.id}`} >
+            <div className={`category-box ${category.category}`} key={category.id} >
+              <h3>{category.category}</h3>
+            </div>
+          </Link>
         )
       )}
     </div>
