@@ -35,7 +35,6 @@ const Login = (props) => {
         onSubmit={(e) => {
           e.preventDefault();
           handleLogin(formData);
-          // console.log(loggedIn)
         }}
       >
         <label>
