@@ -1,7 +1,7 @@
 
 
 const ProductDetailsButton = (props) => {
-  const { buttonName, setActive, handleEdit, handleAdd, handleDelete } = props
+  const { buttonName, setActive } = props
 
   const handleClick = (e) => {
     e.preventDefault();

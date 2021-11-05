@@ -6,6 +6,7 @@ import "./ProductDetails.css";
 
 const ProductDetails = (props) => {
   const [currentUser, setCurrentUser] = useState(null);
+
   const {
     products,
     ratings,
@@ -31,6 +32,7 @@ const ProductDetails = (props) => {
     const fetchProduct = products.find((product) => product.id === Number(id));
     setProduct(fetchProduct);
   }, [setProduct, products, id]);
+
 
   return (
     <div className="details-container">

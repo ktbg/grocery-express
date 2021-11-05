@@ -1,42 +1,64 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import StarRateIcon from "@mui/icons-material/StarRate";
 // import { getAllRatings } from "../../services/star-ratings";
 import "./StarRating.css";
 
 const StarRating = (props) => {
-  const { rating, active, setActive, handleRatingDelete } = props;
   const [newRating, setNewRating] = useState(null);
   const [hover, setHover] = useState(null);
-  const editRating = useRef("");
-  // const { rating, setRating, currentUser } = props;
-  // const { currentUser, product_id, ratings } = props;
+  const [formData, setFormData] =useState({
+    rating: "", 
+    product_id: "", 
+    user_id: ""
+  })
+  
+  const {
+    currentUser,
+    rating,
+    active,
+    setActive,
+    buttonName,
+    setButtonName,
+    handleRatingCreate,
+    handleRatingUpdate,
+    handleRatingDelete,
+    product_id
+  } = props;
 
-  // filter ratings for this product and user, set to newRating to either
-  // user's rating or 0 if user has not yet rated product
-  //  useEffect(() => {
-  //   if(currentUser){
-  //     const findRating = ratings.find(
-  //       (rating) =>
-  //         rating.user_id === currentUser.id && rating.product_id === Number(product_id)
-  //     );
-  //     if (findRating) setNewRating(findRating.rating);
-  //     else setNewRating(0);
-  //   }
-  // }, [currentUser, product_id]);
+  // ---------- handles click on stars to set rating ---------------
 
-  const handleClick = (e, value) => {
+   const handleClick = (e) => {
     e.preventDefault();
-    // postRating
-    // stop hover
-    // update button name to edit (from delete or add)
-    setNewRating(value);
-    setActive(false);
+    const { value } = e.target;
+    setFormData({
+      rating: Number(value), 
+      user_id: currentUser.id,
+      product_id: Number(product_id),
+    })
+ 
+    if (buttonName === "add rating"){
+      handleRatingCreate(formData);
+      setButtonName('edit rating');     // changes button from 'add' to 'edit' if initial rating did not exist
+    } else {
+      handleRatingUpdate(rating.id, formData);
+    }
+    setNewRating(value);    // sets star rating state
+    setActive(false);       // stop hover     
+                                            
+    // setFormData({
+    //   rating: "", 
+    //   product_id: "", 
+    //   user_id: ""
+    // })                               
   };
+
+  // ---------- handles rating delete if rating exists already --------------
 
   const handleDeleteClick = () => {
     handleRatingDelete(rating.id);
     setNewRating(0);
-    console.log('rating deleted');
+    setActive(false);
+    console.log('rating deleted'); // DUCHESS
   };
 
   return (
@@ -84,3 +106,25 @@ const StarRating = (props) => {
 };
 
 export default StarRating;
+
+
+// ================== TEST CODE ================================
+
+  // const editRating = useRef("");
+  // const { rating, setRating, currentUser } = props;
+  // const { currentUser, product_id, ratings } = props;
+
+  // filter ratings for this product and user, set to newRating to either
+  // user's rating or 0 if user has not yet rated product
+  //  useEffect(() => {
+  //   if(currentUser){
+  //     const findRating = ratings.find(
+  //       (rating) =>
+  //         rating.user_id === currentUser.id && rating.product_id === Number(product_id)
+  //     );
+  //     if (findRating) setNewRating(findRating.rating);
+  //     else setNewRating(0);
+  //   }
+  // }, [currentUser, product_id]);
+
+ 
