@@ -1,13 +1,20 @@
-import { NavLink } from 'react-router-dom'
-import './Nav.css'
+import { NavLink } from "react-router-dom";
+import "./Nav.css";
 
-const NavLoggedOut = () => {
+const NavLoggedOut = ({ setOpen }) => {
+  const handleClick = () => {
+    setOpen((prevState) => !prevState);
+  };
   return (
     <>
-      <NavLink to='/login'>Sign In</NavLink>
-      <NavLink to='/register'>Sign Up</NavLink>
+      <NavLink to="/login" onClick={handleClick}>
+        Sign In
+      </NavLink>
+      <NavLink to="/register" onClick={handleClick}>
+        Sign Up
+      </NavLink>
     </>
-  )
-}
+  );
+};
 
-export default NavLoggedOut
+export default NavLoggedOut;

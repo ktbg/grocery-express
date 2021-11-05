@@ -12,7 +12,6 @@ const ProductDetailCard = (props) => {
   const {
     product,
     ratings,
-    setRatings,
     currentUser,
     id,
     handleRatingCreate,
