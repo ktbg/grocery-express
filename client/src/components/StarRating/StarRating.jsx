@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import StarRateIcon from "@mui/icons-material/StarRate";
 // import { getAllRatings } from "../../services/star-ratings";
 import "./StarRating.css";
@@ -11,7 +11,7 @@ const StarRating = (props) => {
     product_id: "", 
     user_id: ""
   })
-  
+  const editRating = useRef(0)
   const {
     currentUser,
     rating,
@@ -25,22 +25,36 @@ const StarRating = (props) => {
     product_id
   } = props;
 
+  useEffect(() => {
+    const presetRating = () => {
+      setNewRating(rating?.rating);
+    }
+    if (rating?.id) presetRating();
+  },[rating])
   // ---------- handles click on stars to set rating ---------------
 
    const handleClick = (e) => {
     e.preventDefault();
     const { value } = e.target;
-    setFormData({
-      rating: Number(value), 
-      user_id: currentUser.id,
-      product_id: Number(product_id),
-    })
+    // setFormData({
+    //   rating: value, 
+    //   user_id: currentUser.id,
+    //   product_id: product_id,
+    // })
  
     if (buttonName === "add rating"){
-      handleRatingCreate(formData);
+      handleRatingCreate(product_id, {
+        rating: value, 
+        user_id: currentUser.id,
+        product_id: product_id,
+      });
       setButtonName('edit rating');     // changes button from 'add' to 'edit' if initial rating did not exist
     } else {
-      handleRatingUpdate(rating.id, formData);
+      handleRatingUpdate(rating.id, {
+        rating: value, 
+        user_id: currentUser.id,
+        product_id: product_id,
+      });
     }
     setNewRating(value);    // sets star rating state
     setActive(false);       // stop hover     
@@ -57,6 +71,7 @@ const StarRating = (props) => {
   const handleDeleteClick = () => {
     handleRatingDelete(rating.id);
     setNewRating(0);
+    setHover(null);
     setActive(false);
     console.log('rating deleted'); // DUCHESS
   };
@@ -73,10 +88,10 @@ const StarRating = (props) => {
               <input
                 type="radio"
                 name="rating"
-                // defaultValue={initialValue}
+                // defaultValue={rating}
                 // ref={editRating}
                 value={ratingValue}
-                onClick={(e) => handleClick(e, ratingValue)}
+                onClick={(e) => handleClick(e)}
               />
               <StarRateIcon
                 sx={{

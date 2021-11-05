@@ -4,9 +4,11 @@ Rails.application.routes.draw do
   # DUCHESS
   # resources :users, only: :create
   resources :users, only: [:index, :show, :create] 
-  resources :star_ratings
+    resources :star_ratings
   
   resources :categories, only: [:index, :show] 
-  resources :products, only: [:index, :show]
+  resources :products, only: [:index, :show] do 
+    resources :star_ratings, shallow: true
+  end
   
 end

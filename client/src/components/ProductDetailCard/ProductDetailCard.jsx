@@ -32,11 +32,11 @@ const ProductDetailCard = (props) => {
         setRating(findRating)
         setButtonName("edit rating");
       } else {
-        setRating({})
+        setRating({rating: 0})
         setButtonName("add rating");
       };
     }
-  }, [currentUser, id]);
+  }, [currentUser, id, ratings]);
 
   console.log(rating); //DUCHESS)
 

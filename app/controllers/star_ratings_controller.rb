@@ -21,6 +21,8 @@ class StarRatingsController < ApplicationController
   def create
     @star_rating = StarRating.new(star_rating_params)
     @star_rating.user = @current_user
+    @product = Product.find(params[:product_id])
+    @star_rating.product = @product
     if @star_rating.save
       render json: @star_rating
       # render json: @star_rating, status: :created, location: @star_rating

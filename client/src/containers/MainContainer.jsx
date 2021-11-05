@@ -45,8 +45,8 @@ const MainContainer = () => {
     fetchStarRatings();
   }, []);
 
-  const handleRatingCreate = async (formData) => {
-    const newRating = await postRating(formData);
+  const handleRatingCreate = async (id, formData) => {
+    const newRating = await postRating(id, formData);
     setRatings((prevState) => [...prevState, newRating]);
   };
 
