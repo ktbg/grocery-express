@@ -65,10 +65,11 @@ const ProductDetailCard = (props) => {
               rating={rating}
               active={active}
               setActive={setActive}
+              buttonName={buttonName}
               // product_id={id}
               // handleRatingCreate={handleRatingCreate}
               // handleRatingUpdate={handleRatingUpdate}
-              // handleRatingDelete={handleRatingDelete}
+              handleRatingDelete={handleRatingDelete}
             />
           </div>
         ) : null}
