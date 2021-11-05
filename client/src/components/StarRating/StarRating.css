@@ -5,3 +5,19 @@ input[type="radio"]{
 .star {
   cursor: pointer;
 }
+
+.rating {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  
+}
+
+.rating-text-container {
+  margin-left: 38px;
+  text-align: end;
+}
+
+.rating-text {
+  align-self: baseline;
+}
