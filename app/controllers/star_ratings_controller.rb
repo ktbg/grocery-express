@@ -5,31 +5,33 @@ class StarRatingsController < ApplicationController
 
   # DUCHESS - not a time where we need to see all star ratings as of yet
   # when we do average rating there will be
-  # GET /star_ratings
+  # GET /star_ratings - WORKS
   def index
     @star_ratings = StarRating.all
 
     render json: @star_ratings
   end
 
-  # GET /star_ratings/1
+  # GET /star_ratings/1 - WORKS
   def show
     render json: @star_rating
   end
 
-  # POST /star_ratings
+  # POST /star_ratings - WORKS
   def create
     @star_rating = StarRating.new(star_rating_params)
     @star_rating.user = @current_user
     if @star_rating.save
-      render json: @star_rating, status: :created, location: @star_rating
+      render json: @star_rating
+      # render json: @star_rating, status: :created, location: @star_rating
     else
       render json: @star_rating.errors, status: :unprocessable_entity
     end
   end
 
-  # PATCH/PUT /star_ratings/1
+  # PATCH/PUT /star_ratings/1 - WORKS
   def update
+    # @star_rating.user = @current_user
     if @star_rating.update(star_rating_params)
       render json: @star_rating
     else
@@ -37,7 +39,7 @@ class StarRatingsController < ApplicationController
     end
   end
 
-  # DELETE /star_ratings/1
+  # DELETE /star_ratings/1 - WORKS
   def destroy
     @star_rating.destroy
   end
@@ -50,7 +52,7 @@ class StarRatingsController < ApplicationController
   end
   
   def set_user_star_rating
-    @star_rating = @current_user.star_rating.find(params[:id])
+    @star_rating = @current_user.star_ratings.find(params[:id])
   end
 
   # Only allow a list of trusted parameters through.
