@@ -12,8 +12,8 @@ import Home from '../screens/Home/Home'
 const MainContainer = () => {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
+  const [product, setProduct] = useState([]);
   const [ratings, setRatings] = useState([]);
-  const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -29,7 +29,7 @@ const MainContainer = () => {
       setProducts(productList);
     }
     fetchProducts();
-  }, [toggle])
+  }, [])
 
   // star rating useEffect to send to the details page
   useEffect(() => {
@@ -46,7 +46,7 @@ const MainContainer = () => {
         <CategoryDetails categories={categories} products={products} />
       </Route>
       <Route path='/products/:id'>
-        <ProductDetails products={products} ratings={ratings} setToggle={setToggle}/>
+        <ProductDetails product={product} setProduct={setProduct} products={products} ratings={ratings} setRatings={setRatings}/>
       </Route>
       <Route path='/'>
         <Home categories={categories} />

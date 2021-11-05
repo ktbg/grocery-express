@@ -20,6 +20,8 @@
 ## Overview
 
 **Grocery Express** is an online marketplace providing a platform for users to view and rate foods. 
+
+[Grocery Express Live Site](https://grocery-express.netlify.app/)
 <br>
 
 ## MVP
