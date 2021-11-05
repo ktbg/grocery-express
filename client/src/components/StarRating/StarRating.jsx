@@ -1,17 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import StarRateIcon from "@mui/icons-material/StarRate";
-// import { getAllRatings } from "../../services/star-ratings";
 import "./StarRating.css";
 
 const StarRating = (props) => {
   const [newRating, setNewRating] = useState(null);
   const [hover, setHover] = useState(null);
-  const [formData, setFormData] =useState({
-    rating: "", 
-    product_id: "", 
-    user_id: ""
-  })
-  const editRating = useRef(0)
+ 
   const {
     currentUser,
     rating,
@@ -36,11 +30,6 @@ const StarRating = (props) => {
    const handleClick = (e) => {
     e.preventDefault();
     const { value } = e.target;
-    // setFormData({
-    //   rating: value, 
-    //   user_id: currentUser.id,
-    //   product_id: product_id,
-    // })
  
     if (buttonName === "add rating"){
       handleRatingCreate(product_id, {
@@ -57,13 +46,7 @@ const StarRating = (props) => {
       });
     }
     setNewRating(value);    // sets star rating state
-    setActive(false);       // stop hover     
-                                            
-    // setFormData({
-    //   rating: "", 
-    //   product_id: "", 
-    //   user_id: ""
-    // })                               
+    setActive(false);       // stop hover                                  
   };
 
   // ---------- handles rating delete if rating exists already --------------
@@ -88,8 +71,6 @@ const StarRating = (props) => {
               <input
                 type="radio"
                 name="rating"
-                // defaultValue={rating}
-                // ref={editRating}
                 value={ratingValue}
                 onClick={(e) => handleClick(e)}
               />
@@ -98,7 +79,6 @@ const StarRating = (props) => {
                   color:
                     ratingValue <= (hover || newRating) ? "red" : "#C4C4C4",
                 }}
-                // newRating={newRating}
                 ratingValue={ratingValue}
                 onMouseEnter={() => active && setHover(ratingValue)}
                 onMouseLeave={() => active && setHover(null)}
@@ -122,24 +102,5 @@ const StarRating = (props) => {
 
 export default StarRating;
 
-
-// ================== TEST CODE ================================
-
-  // const editRating = useRef("");
-  // const { rating, setRating, currentUser } = props;
-  // const { currentUser, product_id, ratings } = props;
-
-  // filter ratings for this product and user, set to newRating to either
-  // user's rating or 0 if user has not yet rated product
-  //  useEffect(() => {
-  //   if(currentUser){
-  //     const findRating = ratings.find(
-  //       (rating) =>
-  //         rating.user_id === currentUser.id && rating.product_id === Number(product_id)
-  //     );
-  //     if (findRating) setNewRating(findRating.rating);
-  //     else setNewRating(0);
-  //   }
-  // }, [currentUser, product_id]);
 
  

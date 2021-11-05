@@ -12,7 +12,7 @@ const Button = (props) => {
   return (
     // <HashLink to={`${redirectLocation}`}>
     <Link to={`${redirectLocation}`}>
-      <button className={className}>{name}</button>
+      <button className={`btn ${className}`}>{name}</button>
     </Link>
     // </HashLink>
   )

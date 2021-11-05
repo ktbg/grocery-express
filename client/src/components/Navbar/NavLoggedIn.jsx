@@ -1,10 +1,16 @@
 
 const NavLoggedIn = (props) => {
-  const { handleLogout } = props;
+  const { handleLogout, setOpen } = props;
+
+  const handleClick = () =>{
+    handleLogout();
+    setOpen((prevState) => !prevState);
+  }
+
 
   return (
     <>
-      <button className='sign-out' onClick={handleLogout}>Sign Out</button>
+      <button className='sign-out invisible' onClick={handleClick}>Sign Out</button>
     </>
   )
 }
