@@ -61,8 +61,9 @@ Client (Front End)
 | :--------------: | :----------------------------------------------------------- |
 | React       | _A JavaScript library for creating user interfaces_          |
 | React Router   | _Declarative routing for React_                              |
-| React Router Hash Link   | _Package allowing scrolling to hash fragments in links_                              |
+| React Router Hash Link   | _Package allowing scrolling to hash fragments in links_ |
 | Material Icons  | _Ready to use React icons_                                   |
+| Styled Components  | _Styling library using tagged template literals and CSS_ |
 | Axios       | _Promise based HTTP client for the browser and node.js_      |
 | Ruby on Rails   | _Server-side MVC framework used for the back end_            |
 | bcrypt       | _A simple wrapper for safely hashing and handling passwords_ |
