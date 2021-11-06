@@ -37,7 +37,7 @@ const handleSubmit = (e) => {
     <p className="form-helper">
       Have an account? <Link to='/login'>Sign In
       <span className="chevron">
-        <ChevronRightIcon color="black" />
+        <ChevronRightIcon color="black" sx={{ marginBottom: "-7px" }}/>
       </span></Link>
     </p>
     <form

@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import { NavLink, useLocation, useHistory } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
-
 
 import NavLoggedIn from "./NavLoggedIn";
 import NavLoggedOut from "./NavLoggedOut";
@@ -20,12 +18,27 @@ const Nav = (props) => {
   let location = useLocation();
   let history = useHistory();
 
+  // ---------------- styles to override Mui icons for different screen sizes --------------
+
+  const MobileIcons = {
+    display: "inline", 
+    marginBottom: "-3px",
+    paddingRight: "50px"
+  }
+
+  const DesktopIcons = {
+    display: "none"
+  }
+
+
   // window size listener code idea from: https://blog.logrocket.com/developing-responsive-layouts-with-react-hooks/
   useEffect(() => {
     const handleWindowResize = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handleWindowResize);
     return () => window.removeEventListener("resize", handleWindowResize);
   }, []);
+
+  //  ------------------ different left nav links depending on page -------------------------
 
   const HomeNav = (
     <>
@@ -37,16 +50,17 @@ const Nav = (props) => {
 
   const BackNav = (
     <>
-      <button className="invisible" onClick={() => history.goBack()}>
-        <ChevronLeftIcon color="black" />
+      <p className="invisible back" onClick={() => history.goBack()}>
+        <ChevronLeftIcon color="black" sx={{ marginBottom: "-6px" }}/>
         <span className="nav-back">Back</span>
-      </button>
+      </p>
     </>
   );
 
+// ----------------- nav item always visible -------------------------------------------------
+
   const alwaysOptions = (
-    <HashLink to="/#categories" onClick={()=> setOpen((prevState) => !prevState)}>
-      <ShoppingBagIcon color="black" className="menu-icon"/>
+    <HashLink className="mobile-always" to="/#categories" onClick={()=> setOpen((prevState) => !prevState)}>
       Departments
     </HashLink>
   );
@@ -68,15 +82,17 @@ const Nav = (props) => {
           currentUser={currentUser}
           alwaysOptions={alwaysOptions}
           handleLogout={handleLogout}
+          MobileIcons={MobileIcons}
+          width={width}
         />
       ) : (
         <div className="nav-right">
           {alwaysOptions}
 
           {currentUser ? (
-            <NavLoggedIn handleLogout={handleLogout} />
+            <NavLoggedIn handleLogout={handleLogout} setOpen={setOpen} DesktopIcons={DesktopIcons}/>
           ) : (
-            <NavLoggedOut />
+            <NavLoggedOut setOpen={setOpen} DesktopIcons={DesktopIcons} />
           )}
         </div>
       )}

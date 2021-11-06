@@ -26,6 +26,7 @@
 
 .title {
   font-size: 48px;
+  font-family: 'Playfair Display', sans-serif;
 }
 
 .about-text {
@@ -185,5 +186,11 @@
 
   .branding {
     width: 95%;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .hero-img-box {
+    margin-left: -55px;
   }
 }

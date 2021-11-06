@@ -1,18 +1,20 @@
+import "./Nav.css";
 
 const NavLoggedIn = (props) => {
   const { handleLogout, setOpen } = props;
 
-  const handleClick = () =>{
+  const handleClick = () => {
     handleLogout();
     setOpen((prevState) => !prevState);
-  }
-
+  };
 
   return (
     <>
-      <button className='sign-out invisible' onClick={handleClick}>Sign Out</button>
+      <p className="sign-out" onClick={handleClick}>
+        Sign Out
+      </p>
     </>
-  )
-}
+  );
+};
 
-export default NavLoggedIn
+export default NavLoggedIn;

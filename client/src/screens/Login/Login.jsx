@@ -1,14 +1,15 @@
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import { useState } from "react";
-import './Login.css'
-import '../../App.css'
+import "./Login.css";
+import "../../App.css";
+import { autocompleteClasses } from "@mui/material";
 
 const Login = (props) => {
   const [formData, setFormData] = useState({
-        email: "",
-        password: "",
-      });
+    email: "",
+    password: "",
+  });
 
   const { email, password } = formData;
   const { handleLogin, incorrectLogin } = props;
@@ -25,10 +26,17 @@ const Login = (props) => {
     <div className="sign-in-container">
       <h3 className="form-title">Sign In</h3>
       <p className="form-helper">
-        New to Grocery Express? <Link to='/register'>Sign Up
-        <span className="chevron">
-          <ChevronRightIcon color="black" />
-        </span></Link>
+        New to Grocery Express?{" "}
+        <Link to="/register">
+          Sign Up
+          <span className="chevron">
+            <ChevronRightIcon
+              color="black"
+              className="chevron-right"
+              sx={{ marginBottom: "-7px" }}
+            />
+          </span>
+        </Link>
       </p>
       <form
         className="sign-in-form"
@@ -55,7 +63,9 @@ const Login = (props) => {
             onChange={handleChange}
           />
         </label>
-        {incorrectLogin ? <p className="danger">Email or password provided do not match</p> : null}
+        {incorrectLogin ? (
+          <p className="danger">Email or password provided do not match</p>
+        ) : null}
         <button className="user-form-button">Submit</button>
       </form>
     </div>
