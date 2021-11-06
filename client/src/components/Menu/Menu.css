@@ -49,9 +49,9 @@ div.link.welcome {
   align-items: center;
 }
 
-a.mobile-always {
+/* #mobile-always {
   padding-left: 31px;
-}
+} */
 
 @media screen and (max-width: 500) {
   .menu {

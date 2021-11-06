@@ -55,7 +55,7 @@ const ProductDetailCard = (props) => {
       <div className="details-right">
         <h3 className="details-name">{product?.name}</h3>
 
-        {/* ========== star rating renders if currentUser ============== */}
+        {/* ----------- star rating renders if currentUser -------------- */}
 
         {currentUser ? (
           <div className="rating">
@@ -76,7 +76,7 @@ const ProductDetailCard = (props) => {
 
         <ProductInfo product={product} />
 
-        {/* ======== conditional button name and action dependent on StarRating ======== */}
+        {/* ----------- conditional button name and action dependent on StarRating -------- */}
 
         <div className="bottom-box">
           {currentUser ? (

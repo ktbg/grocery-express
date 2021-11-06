@@ -14,9 +14,9 @@ nav {
 
 .nav-right {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-bottom: 2px;
-  width: 250px;
+  width: 350px;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
 }

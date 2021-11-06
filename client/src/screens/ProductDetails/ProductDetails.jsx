@@ -19,6 +19,7 @@ const ProductDetails = (props) => {
   const { id } = useParams();
 
   // verifies use to conditionally render the star ratings within the product detail card
+
   useEffect(() => {
     const handleVerify = async () => {
       const userData = await verifyUser();
@@ -28,6 +29,7 @@ const ProductDetails = (props) => {
   }, []);
 
   // fetch one product to render from the params id
+  
   useEffect(() => {
     const fetchProduct = products.find((product) => product.id === Number(id));
     setProduct(fetchProduct);

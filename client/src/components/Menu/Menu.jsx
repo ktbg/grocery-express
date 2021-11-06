@@ -27,13 +27,13 @@ const Menu = (props) => {
   return (
     <div className="menu">
       <div className="mobile-menu"> 
-        <ShoppingBagIcon color="black" className="menu-icon"/>
+        <ShoppingBagIcon color="black" className="menu-icon" />
         {alwaysOptions}
       </div>
       
       {currentUser ? (
         <div className="mobile-menu">
-          <LogoutIcon color="black" className="menu-icon" />
+          <LogoutIcon color="black" className="menu-icon"  sx={{marginRight: "70px"}} />
           <p className="sign-out" onClick={handleClick}>
             Sign Out
           </p>
@@ -42,13 +42,13 @@ const Menu = (props) => {
       ) : (
         <React.Fragment>
           <div className="mobile-menu" >
-            <AccountBoxIcon color="black" sx={{ marginBottom: "-10px"}} />
+            <AccountBoxIcon color="black" sx={{marginRight: "20px"}}/>
             <NavLink to="/login" onClick={handleClick}>
               Sign In
             </NavLink>
           </div>
           <div className="mobile-menu" >
-            <PersonAddIcon color="black"  />
+            <PersonAddIcon color="black"  sx={{marginRight: "20px"}} />
             <NavLink to="/register" onClick={handleClick}>
               Sign Up
             </NavLink>
