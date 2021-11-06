@@ -3,5 +3,7 @@ footer {
 }
 
 .footer-link {
-  margin: 20px;
+  margin: 40px;
+  width: 80px;
+  height: 80px;
 }

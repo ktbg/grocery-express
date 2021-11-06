@@ -3,6 +3,8 @@ button.btn {
   color: white;
   text-transform: uppercase;
   border-radius: 5px;
+  height: 63px;
+  width: 231px;
 }
 
 .form {
