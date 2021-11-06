@@ -21,10 +21,14 @@ nav {
   font-size: 14px;
 }
 
+.sign-out {
+  cursor: pointer;
+}
+
 .menu-icon {
   display: none;
   margin-right: 20px;
-  align-self: baseline;
+  
 }
 
 .burger {
@@ -43,7 +47,8 @@ button.invisible {
     margin-left: 2rem;
   }
 
+
   .menu-icon {
-    display: inline;
+    display: inline-block;
   }
 }

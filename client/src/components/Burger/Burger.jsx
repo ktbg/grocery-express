@@ -9,7 +9,9 @@ const Burger = ({
   setOpen,
   currentUser,
   alwaysOptions, 
-  handleLogout
+  handleLogout,
+  MobileIcons, 
+  width
 }) => {
   const nodeRef = useRef(null);
   const handleClick = (event) => {
@@ -31,6 +33,8 @@ const Burger = ({
             alwaysOptions={alwaysOptions}
             handleLogout={handleLogout}
             setOpen={setOpen}
+            MobileIcons={MobileIcons}
+            width={width}
           />
         </div>
       </CSSTransition>

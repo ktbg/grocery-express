@@ -20,10 +20,6 @@
   padding: 15px 50px;
 }
 
-/* .menu a:hover {
-  color: #83c5be;
-} */
-
 .menu-enter {
   opacity: 0;
 }
@@ -45,6 +41,16 @@
 
 div.link.welcome {
   line-height: 1.5em;
+}
+
+.mobile-menu {
+  display: flex;
+  padding-left: 50px;
+  align-items: center;
+}
+
+a.mobile-always {
+  padding-left: 31px;
 }
 
 @media screen and (max-width: 500) {
