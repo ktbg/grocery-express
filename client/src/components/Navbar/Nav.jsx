@@ -1,11 +1,13 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react";
 import { NavLink, useLocation, useHistory } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
+
 
 import NavLoggedIn from "./NavLoggedIn";
 import NavLoggedOut from "./NavLoggedOut";
-import Burger from '../Burger/Burger';
+import Burger from "../Burger/Burger";
 
 import "./Nav.css";
 
@@ -23,7 +25,7 @@ const Nav = (props) => {
     const handleWindowResize = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handleWindowResize);
     return () => window.removeEventListener("resize", handleWindowResize);
-   }, []);
+  }, []);
 
   const HomeNav = (
     <>
@@ -31,30 +33,36 @@ const Nav = (props) => {
         Grocery Express
       </NavLink>
     </>
-  )
- 
+  );
+
   const BackNav = (
     <>
-    <button className="invisible" onClick={() => history.goBack()} >
-      <ChevronLeftIcon color="black"/><span className="nav-back">Back</span>
-    </button>
+      <button className="invisible" onClick={() => history.goBack()}>
+        <ChevronLeftIcon color="black" />
+        <span className="nav-back">Back</span>
+      </button>
     </>
-  )
+  );
 
-  const alwaysOptions = ( <HashLink to="/#categories">Departments</HashLink> )
+  const alwaysOptions = (
+    <HashLink to="/#categories" onClick={()=> setOpen((prevState) => !prevState)}>
+      <ShoppingBagIcon color="black" className="menu-icon"/>
+      Departments
+    </HashLink>
+  );
 
   return (
     <nav>
       {/* conditional to render home branding, desktop back button, mobile back chevron */}
 
       <div className="nav-left">
-        { location.pathname === "/" ? HomeNav : BackNav}
+        {location.pathname === "/" ? HomeNav : BackNav}
       </div>
-      
+
       {/* conditional to render mobile menu or the right nav menu */}
-      
+
       {width < breakpoint ? (
-        <Burger 
+        <Burger
           open={open}
           setOpen={setOpen}
           currentUser={currentUser}
@@ -63,16 +71,15 @@ const Nav = (props) => {
         />
       ) : (
         <div className="nav-right">
-          { alwaysOptions }
+          {alwaysOptions}
 
-          { currentUser ? (
+          {currentUser ? (
             <NavLoggedIn handleLogout={handleLogout} />
           ) : (
             <NavLoggedOut />
           )}
         </div>
       )}
-      
     </nav>
   );
 };
