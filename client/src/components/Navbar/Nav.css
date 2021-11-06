@@ -21,6 +21,11 @@ nav {
   font-size: 14px;
 }
 
+.menu-icon {
+  display: none;
+  margin-right: 20px;
+  align-self: baseline;
+}
 
 .burger {
   display: none;
@@ -31,4 +36,14 @@ button.invisible {
   background-color: white;
   border: none;
   box-shadow: none;
+}
+
+@media screen and (max-width: 900px){
+  nav {
+    margin-left: 2rem;
+  }
+
+  .menu-icon {
+    display: inline;
+  }
 }

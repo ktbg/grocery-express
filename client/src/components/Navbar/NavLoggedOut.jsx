@@ -1,4 +1,6 @@
 import { NavLink } from "react-router-dom";
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import "./Nav.css";
 
 const NavLoggedOut = ({ setOpen }) => {
@@ -8,10 +10,10 @@ const NavLoggedOut = ({ setOpen }) => {
   return (
     <>
       <NavLink to="/login" onClick={handleClick}>
-        Sign In
+        <AccountBoxIcon color="black" className="menu-icon" />Sign In
       </NavLink>
       <NavLink to="/register" onClick={handleClick}>
-        Sign Up
+        <PersonAddIcon color="black" className="menu-icon" />Sign Up
       </NavLink>
     </>
   );

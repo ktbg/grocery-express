@@ -1,9 +1,15 @@
 .hero {
   height: 40%;
   width: 100%;
-  display: flex;
-  justify-content: center;
   margin: 70px auto;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  min-width: 90%;
+  margin: 0 auto;
 }
 
 .hero-text {
@@ -12,8 +18,10 @@
   justify-content: space-around;
   text-align: left;
   width: 30%;
-  padding-right: 10%;
+  /* padding-right: 10%; */
   margin: auto 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .title {
@@ -24,27 +32,36 @@
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   line-height: 1.5em;
-  margin: 32px 0;
+  margin: 32px 30px 32px 0;
   font-weight: 400;
 }
 
 .hero-img-box {
-  width:  40%;
-  height: 450px;
+  width:  50%;
+  max-width: 650px;
+  max-height: 550px;
   background-size: cover;
   background-image: url('../../assets/images/site_general/sharon-pittaway-KUZnfk-2DSQ-unsplash.jpg');
+  background-position: left center;
+}
+
+.img-sm { 
+  display: none;
+}
+
+.branding-container {
+  width: 100%;
+  height: 275px;
+  background-color: black;
+  color: white;
+  margin: 120px auto;
 }
 
 .branding {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
-  height: 240px;
-  background-color: black;
-  color: white;
   font-family: "Open Sans", sans-serif;
-  margin: 150px auto;
 }
 
 .branding-box {
@@ -53,7 +70,6 @@
   padding-top: 20px;
   padding-bottom: 20px;
   height: 80%;
-  width: 320px;
   border-left: 2px solid white;
 }
 
@@ -74,4 +90,100 @@
 
 .category-container {
   margin-bottom: 60px;
+  margin-top: -45px;
+}
+
+@media screen and (max-width: 1013px){
+  .branding-container {
+    height: auto;
+  }
+  
+  .branding {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .branding-box {
+    max-width: 100%;
+  
+  }
+
+  .branding-title {
+    font-size: 24px;
+  }
+
+  .branding-text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 990px){
+  .hero-container {
+    margin: 0;
+    width: 100%;
+    
+  }
+}
+
+@media screen and (max-width: 900px){
+  .hero {
+    height: auto;
+  }
+  
+  .hero-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .hero-text {
+    width: 70%;
+  }
+
+  .hero-img-box {
+    height: 300px;
+    width: auto;
+    margin-bottom: 60px;
+  }
+
+  .img-lg {
+    display: none;
+  }
+
+  .img-sm {
+    display: block;
+  }
+  
+  .branding {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hero-container {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .about-text {
+    font-size: 14px;
+  }
+
+  .hero-img-box {
+    width: 100vw;
+    height: 250px;
+    margin-left: -80px;
+  }
+
+  .branding {
+    width: 95%;
+  }
 }
