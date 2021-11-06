@@ -10,7 +10,7 @@ const CategoryBox = (props) => {
         (
           <Link key={category.id} to={`/categories/${category.id}`} >
             <div className={`category-box ${category.category}`} key={category.id} >
-              <h3>{category.category}</h3>
+              <h3 className="category-title">{category.category}</h3>
             </div>
           </Link>
         )

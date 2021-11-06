@@ -1,6 +1,6 @@
 import './Button.css'
-// import { HashLink } from 'react-router-hash-link'
-import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
+
 
 const Button = (props) => {
   // take in props for redirect location
@@ -11,9 +11,9 @@ const Button = (props) => {
 
   return (
     // <HashLink to={`${redirectLocation}`}>
-    <Link to={`${redirectLocation}`}>
+    <HashLink to={redirectLocation}>
       <button className={`btn ${className}`}>{name}</button>
-    </Link>
+    </HashLink>
     // </HashLink>
   )
 }

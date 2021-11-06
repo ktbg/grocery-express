@@ -2,7 +2,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin: 25px 75px;
+  margin: 1.563rem 3.563rem;
+  height: 70px;
 }
 
 .nav-brand {
@@ -15,8 +16,9 @@ nav {
   display: flex;
   justify-content: space-between;
   padding-bottom: 2px;
-  width: 30%;
+  width: 250px;
   font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
 }
 
 
