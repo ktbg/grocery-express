@@ -32,7 +32,7 @@ const handleSubmit = (e) => {
 }
 
   return (
-    <div className="sign-in-container">
+    <div className="sign-in-container"> {/* styles for this class are in Login.css */}
     <h3 className="form-title">Sign Up</h3>
     <p className="form-helper">
       Have an account? <Link to='/login'>Sign In
@@ -64,7 +64,6 @@ const handleSubmit = (e) => {
           required
         />
       </label>
-      {/* DUCHESS */}
         <input
           type="password"
           name="password"
@@ -77,8 +76,6 @@ const handleSubmit = (e) => {
         <div>
         {passwordError ? <p className="danger">Password must be minimum 6 characters in length</p> : null}
         </div>
-      {/* </label> */}
-      {/* <Button redirectLocation="/" name="Sign Up" className="form"/> */}
       <button className="user-form-button">Submit</button>
     </form>
   </div>

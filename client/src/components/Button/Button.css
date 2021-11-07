@@ -29,3 +29,9 @@ button.btn.details-btn {
   margin-top: 8%;
   padding: 8px;
 }
+
+@media screen and (max-width: 900px){
+  div.browse-btn {
+    text-align: center;
+  }
+}

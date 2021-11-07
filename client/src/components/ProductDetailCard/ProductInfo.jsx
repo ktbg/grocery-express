@@ -5,11 +5,11 @@ const ProductInfo = (props) => {
   
   return (
     <React.Fragment>
-      {/* ========= product information, all users ================= */}
+      {/* --------- product information, all users ----------------- */}
 
       {product.brand ? <div className="brand">{product?.brand}</div> : null}
 
-      {/* ========= all products have a uom, but not size, if size list size uom ========== */}
+      {/* --------- all products have a uom, but not size, if size list size uom ---------- */}
 
       {product.size ? (
         <div className="size">
@@ -17,7 +17,7 @@ const ProductInfo = (props) => {
         </div>
       ) : null}
 
-      {/* ======== if no size, list item as price per uom ==========  */}
+      {/* -------- if no size, list item as price per uom ----------  */}
 
       {product.size ? (
         <div className="price">{product?.price}</div>

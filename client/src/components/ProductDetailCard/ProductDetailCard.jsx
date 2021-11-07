@@ -19,7 +19,7 @@ const ProductDetailCard = (props) => {
     handleRatingDelete,
   } = props;
 
-   // filter ratings for this product and user, set to newRating to either
+  // filter ratings for this product and user, set to newRating to either
   // user's rating or 0 if user has not yet rated product
   useEffect(() => {
     if(currentUser){
@@ -36,8 +36,6 @@ const ProductDetailCard = (props) => {
       };
     }
   }, [currentUser, id, ratings]);
-
-  console.log(rating); //DUCHESS)
 
   return (
     <React.Fragment>

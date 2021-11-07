@@ -2,8 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* justify-content: space-between; */
-  /* width: 90%; */
   margin: 0 auto;
 }
 
@@ -15,12 +13,18 @@
   background-size: cover;
   color: white;
   box-shadow: inset 0 0 0 1000px rgba(0,0,0,.3);
+  transition: all 0.3s ease-in-out;
 }
+
+.category-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.2)
+}
+
 
 .category-title {
   position: relative;
   top: 40%;
-  /* left: 10%; */
   font-size: 48px;
   font-family: 'Playfair Display', sans-serif;
 }

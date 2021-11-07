@@ -42,13 +42,9 @@
   display: grid;
   grid-template-columns: 70% 10% 20%;
   align-items: end;
-  /* display: flex;
-  justify-content: space-between; */
   font-size: 12px;
   width: 80%;
   margin: 0 auto;
-  /* text-align: left;
-  align-self: baseline; */
 }
 
 .card-name {

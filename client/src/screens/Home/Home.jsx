@@ -6,6 +6,9 @@ const Home = (props) => {
   const { categories } = props;
   return (
     <div className="home">
+      
+      {/* top hero section */}
+
       <header className="hero">
         <div className="hero-container">
           <div className="hero-text">
@@ -17,11 +20,13 @@ const Home = (props) => {
             <div className="hero-img-box img-sm">
               <div className='hero-img'></div>
             </div>
-            <Button
-              name="Browse Products"
-              redirectLocation="/#categories"
-              className="main"
-            />
+            <div className="browse-btn">
+              <Button
+                name="Browse Products"
+                redirectLocation="/#categories"
+                className="main"
+              />
+            </div>
           </div>
           <div className="hero-img-box img-lg">
             <div className='hero-img'></div>
@@ -30,6 +35,7 @@ const Home = (props) => {
       </header>
 
       {/* branding section */}
+
       <div className="branding-container">
         <div className="branding">
           <div className="branding-box">
@@ -56,6 +62,7 @@ const Home = (props) => {
       
 
       {/* category boxes */}
+      
       <div className="category-container" id="categories">
         <CategoryBox categories={categories} />
       </div>

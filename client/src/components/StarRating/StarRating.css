@@ -9,8 +9,6 @@ input[type="radio"]{
 .rating {
   display: flex;
   flex-direction: row;
-  /* justify-content: space-around; */
-  
 }
 
 .rating-text-container {

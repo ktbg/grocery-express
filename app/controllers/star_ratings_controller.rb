@@ -3,8 +3,9 @@ class StarRatingsController < ApplicationController
   before_action :authorize_request, only: %i[create update destroy]
   before_action :set_user_star_rating, only: %i[update destroy]
 
-  # DUCHESS - not a time where we need to see all star ratings as of yet
+  # 11.5.21 no need for  all star ratings as of yet
   # when we do average rating there will be
+  
   # GET /star_ratings - WORKS
   def index
     @star_ratings = StarRating.all
@@ -25,7 +26,6 @@ class StarRatingsController < ApplicationController
     @star_rating.product = @product
     if @star_rating.save
       render json: @star_rating
-      # render json: @star_rating, status: :created, location: @star_rating
     else
       render json: @star_rating.errors, status: :unprocessable_entity
     end
@@ -33,7 +33,6 @@ class StarRatingsController < ApplicationController
 
   # PATCH/PUT /star_ratings/1 - WORKS
   def update
-    # @star_rating.user = @current_user
     if @star_rating.update(star_rating_params)
       render json: @star_rating
     else

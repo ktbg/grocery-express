@@ -94,6 +94,8 @@ const Nav = (props) => {
             </>
           )}
 
+          {/* toggles menu options based on user login status */}
+          
           {currentUser ? (
             <NavLoggedIn handleLogout={handleLogout} setOpen={setOpen} DesktopIcons={DesktopIcons}/>
           ) : (
