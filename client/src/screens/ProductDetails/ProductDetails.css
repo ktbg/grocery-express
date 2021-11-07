@@ -59,6 +59,12 @@
     width: 90%;
   }
 
+  .details-img {
+    padding: 0 20px;
+    max-height: 400px;
+    max-width: 490px;
+  }
+
   .details-right {
     margin: 0 auto;
     padding-top: 75px;
@@ -69,12 +75,13 @@
 
 @media screen and (max-width: 629px) {
   .details-left {
-    padding: 50px 0;
+    padding: 50px;
   }
 
   .details-right {
     padding-top: 50px;
     padding-left: 0px;
+    width: 90%;
   }
 
   .details-name {
