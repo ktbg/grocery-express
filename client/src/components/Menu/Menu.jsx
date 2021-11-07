@@ -3,8 +3,10 @@ import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import LogoutIcon from "@mui/icons-material/Logout";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
+import HomeIcon from '@mui/icons-material/Home';
 import "./Menu.css";
 import React from "react";
+import Home from "@mui/icons-material/Home";
 
 const Menu = (props) => {
   const { currentUser, alwaysOptions, handleLogout, setOpen } = props;
@@ -16,6 +18,13 @@ const Menu = (props) => {
 
   return (
     <div className="menu">
+
+      {/* menu options always available on mobile */}
+
+      <div className="mobile-menu ">
+        <HomeIcon color="black" sx={{ marginRight: "20px"}} />
+        <NavLink to="/">Home</NavLink>
+      </div>
       <div className="mobile-menu">
         <ShoppingBagIcon color="black" className="menu-icon" />
         {alwaysOptions}
@@ -24,7 +33,7 @@ const Menu = (props) => {
       {/* toggles the menu based on user login status */}
       
       {currentUser ? (
-        <div className="mobile-menu">
+        <div className="mobile-menu sign-out-mobile">
           <LogoutIcon
             color="black"
             className="menu-icon"

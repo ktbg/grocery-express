@@ -63,7 +63,7 @@ const Login = (props) => {
           />
         </label>
         {incorrectLogin ? (
-          <p className="danger">Email or password provided do not match</p>
+          <p className="danger error-text">Email or password provided do not match. Login credentials are case sensitive.</p>
         ) : null}
         <button className="user-form-button">Submit</button>
       </form>

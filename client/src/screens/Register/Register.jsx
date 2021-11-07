@@ -74,7 +74,7 @@ const handleSubmit = (e) => {
           onChange={handleChange}
         />
         <div>
-        {passwordError ? <p className="danger">Password must be minimum 6 characters in length</p> : null}
+        {passwordError ? <p className="danger error-text">Password must be minimum 6 characters in length.</p> : null}
         </div>
       <button className="user-form-button">Submit</button>
     </form>
