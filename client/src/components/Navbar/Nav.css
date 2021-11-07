@@ -30,7 +30,6 @@ nav {
 }
 
 .menu-icon {
-  display: none;
   margin-right: 20px;
 }
 
@@ -50,7 +49,7 @@ button.invisible {
     margin-left: 2rem;
   }
 
-  .menu-icon {
-    display: inline-block;
+  .sign-out-mobile {
+    padding-top: 15px;
   }
 }

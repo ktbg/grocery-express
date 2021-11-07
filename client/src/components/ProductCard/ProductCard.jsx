@@ -21,7 +21,7 @@ const ProductCard = (props) => {
             <p className="card-name">{product.name}</p>
 
             {/* if an item is sold by the UOM, render price/uom, otherwise render just price */}
-            
+
             {product.size ? (
               <p className="card-price">{product.price} </p>
             ) : (
@@ -44,4 +44,3 @@ const ProductCard = (props) => {
 };
 
 export default ProductCard;
- 

@@ -3,21 +3,12 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-/* .form-helper {
-  position: relative;
-}
-
-span.chevron {
-  position: absolute;
-  bottom: 0;
-} */
 input, 
 .input-field {
   display: block;
   margin: 36px auto;
   width: 229px;
   height: 43px;
-  /* text-transform: uppercase; */
   border-radius: 5px;
   border: 1px solid #C4C4C4;
   padding-left: 18px;
@@ -37,5 +28,11 @@ input,
   color: red;
   width: 229px;
   margin: 0 auto;
+}
+
+.error-text {
+  font-size: 12px;
+  text-align: left;
+  
 }
 

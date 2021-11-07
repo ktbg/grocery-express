@@ -9,12 +9,12 @@ button.btn {
 
 button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,.2)
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 button:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0,0,0,.2)
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .form {
@@ -30,7 +30,21 @@ button.btn.details-btn {
   padding: 8px;
 }
 
-@media screen and (max-width: 900px){
+button.btn.product-details-btn {
+  width: 200px;
+  height: 40px;
+}
+
+@media screen and (max-width: 868px) {
+  button.btn.details-btn {
+    width: 229px;
+    height: 43px;
+    font-size: 14px;
+    margin-top: 12%;
+  }
+}
+
+@media screen and (max-width: 900px) {
   div.browse-btn {
     text-align: center;
   }
