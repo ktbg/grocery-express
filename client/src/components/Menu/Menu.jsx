@@ -14,10 +14,6 @@ const Menu = (props) => {
     setOpen((prevState) => !prevState);
   };
 
-  const IconStyles = {
-    marginBottom: "-10px",
-  };
-
   return (
     <div className="menu">
       <div className="mobile-menu">
