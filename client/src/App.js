@@ -52,9 +52,9 @@ function App() {
 
   return (
     <div className="App">
+      <ScrollToTop />
       <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
-          <ScrollToTop />
           <Route path="/login">
             <Login handleLogin={handleLogin} incorrectLogin={incorrectLogin} />
           </Route>
