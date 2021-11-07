@@ -11,7 +11,7 @@ import {
 import Login from "./screens/Login/Login";
 import Register from "./screens/Register/Register";
 import MainContainer from "./containers/MainContainer";
-
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [incorrectLogin, setIncorrectLogin] = useState(false);
@@ -28,12 +28,12 @@ function App() {
 
   const handleLogin = async (formData) => {
     const userData = await loginUser(formData);
-    if (userData){
+    if (userData) {
       setIncorrectLogin(false);
       setCurrentUser(userData);
       history.push("/");
     }
-    setIncorrectLogin(true)
+    setIncorrectLogin(true);
   };
 
   const handleRegister = async (formData) => {
@@ -54,11 +54,12 @@ function App() {
     <div className="App">
       <Layout currentUser={currentUser} handleLogout={handleLogout}>
         <Switch>
+          <ScrollToTop />
           <Route path="/login">
-            <Login handleLogin={handleLogin} incorrectLogin={incorrectLogin}/>
+            <Login handleLogin={handleLogin} incorrectLogin={incorrectLogin} />
           </Route>
           <Route path="/register">
-            <Register handleRegister={handleRegister}/>
+            <Register handleRegister={handleRegister} />
           </Route>
           <Route path="/">
             <MainContainer />
