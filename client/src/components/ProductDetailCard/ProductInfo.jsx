@@ -1,8 +1,9 @@
 import React from "react";
+import "../../screens/ProductDetails/ProductDetails.css";
 
 const ProductInfo = (props) => {
   const { product } = props;
-  
+
   return (
     <React.Fragment>
       {/* --------- product information, all users ----------------- */}

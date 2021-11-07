@@ -1,9 +1,21 @@
-input[type="radio"]{
+input[type="radio"] {
   display: none;
 }
 
-.star {
+.star-container {
+  align-items: center;
+}
+.star,
+.delete-rating {
   cursor: pointer;
+}
+
+.delete-rating {
+  color: #404040;
+}
+
+.delete-rating:hover {
+  color: red;
 }
 
 .rating {
@@ -12,10 +24,39 @@ input[type="radio"]{
 }
 
 .rating-text-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
   margin-left: 38px;
   text-align: end;
 }
 
 .rating-text {
-  align-self: baseline;
+  align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  .rating-text-container {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 579px) {
+  div.rating {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+    /* padding-bottom: 5px; */
+  }
+
+  .rating-text-container {
+    width: 60%;
+    margin-left: 0;
+  }
+
+  .rating-text,
+  .delete-rating {
+    align-items: flex-start;
+    margin-top: 20px;
+  }
 }

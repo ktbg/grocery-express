@@ -1,10 +1,10 @@
-/*  ---------- div from Product.jsx ---------- */
+/*  ---------- div from Products.jsx ---------- */
 .product-card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: space-around;
-  /* margin-left: 12px; */
+  width: 100%;
 }
 
 .product-card {
@@ -13,7 +13,7 @@
   justify-content: space-between;
   border: 1px solid black;
   width: 200px;
-  height: 225px;
+  height: 300px;
   margin: 30px;
   padding: 10px;
 }
@@ -25,8 +25,8 @@
 .product-img {
   height: auto;
   width: auto;
-  max-width: 100px;
-  max-height: 75px;
+  max-width: 150px;
+  max-height: 100px;
   object-fit: cover;
 }
 
@@ -57,3 +57,14 @@
   text-align: right;
 }
 
+@media screen and (max-width: 868px) {
+  .product-card {
+    width: 300px;
+    height: 400px;
+  }
+
+  .card-name,
+  .card-price {
+    font-size: 18px;
+  }
+}

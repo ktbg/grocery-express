@@ -46,6 +46,7 @@ const ProductDetailCard = (props) => {
               require(`../../assets/images/products/${product.image}`).default
             }
             alt={product.name}
+            className="details-img"
           />
         </div>
       )}
@@ -78,7 +79,6 @@ const ProductDetailCard = (props) => {
 
         <div className="bottom-box">
           {currentUser ? (
-            // <button className="invisible">Edit Rating</button>
             <ProductDetailsButton buttonName={buttonName} setActive={setActive}/>
           ) : null}
         </div>

@@ -1,4 +1,4 @@
-
+import '../Button/Button.css'
 
 const ProductDetailsButton = (props) => {
   const { buttonName, setActive } = props
@@ -8,7 +8,7 @@ const ProductDetailsButton = (props) => {
     setActive(true);
   }
   return (
-    <button className="product-details-btn" onClick={handleClick}>
+    <button className="btn product-details-btn" onClick={handleClick}>
       {buttonName}
     </button>
   )
