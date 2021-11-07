@@ -79,7 +79,6 @@ const StarRating = (props) => {
                   color:
                     ratingValue <= (hover || newRating) ? "red" : "#C4C4C4",
                 }}
-                ratingValue={ratingValue}
                 onMouseEnter={() => active && setHover(ratingValue)}
                 onMouseLeave={() => active && setHover(null)}
               />
