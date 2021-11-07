@@ -3,7 +3,7 @@ import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import LogoutIcon from "@mui/icons-material/Logout";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
-import HomeIcon from '@mui/icons-material/Home';
+import HomeIcon from "@mui/icons-material/Home";
 import "./Menu.css";
 import React from "react";
 import Home from "@mui/icons-material/Home";
@@ -11,19 +11,24 @@ import Home from "@mui/icons-material/Home";
 const Menu = (props) => {
   const { currentUser, alwaysOptions, handleLogout, setOpen } = props;
 
-  const handleClick = () => {
+  const handleClickDelete = () => {
     handleLogout();
+    setOpen((prevState) => !prevState);
+  };
+
+  const handleClick = () => {
     setOpen((prevState) => !prevState);
   };
 
   return (
     <div className="menu">
-
       {/* menu options always available on mobile */}
 
       <div className="mobile-menu ">
-        <HomeIcon color="black" sx={{ marginRight: "20px"}} />
-        <NavLink to="/">Home</NavLink>
+        <HomeIcon color="black" sx={{ marginRight: "20px" }} />
+        <NavLink to="/" onClick={handleClick}>
+          Home
+        </NavLink>
       </div>
       <div className="mobile-menu">
         <ShoppingBagIcon color="black" className="menu-icon" />
@@ -31,7 +36,7 @@ const Menu = (props) => {
       </div>
 
       {/* toggles the menu based on user login status */}
-      
+
       {currentUser ? (
         <div className="mobile-menu sign-out-mobile">
           <LogoutIcon
@@ -39,7 +44,7 @@ const Menu = (props) => {
             className="menu-icon"
             sx={{ marginRight: "70px" }}
           />
-          <p className="sign-out" onClick={handleClick}>
+          <p className="sign-out" onClick={handleClickDelete}>
             Sign Out
           </p>
         </div>
