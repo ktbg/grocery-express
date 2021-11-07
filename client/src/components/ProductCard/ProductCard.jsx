@@ -1,4 +1,5 @@
 import Button from "../Button/Button";
+import "./ProductCard.css";
 
 const ProductCard = (props) => {
   const { product } = props;
@@ -9,18 +10,38 @@ const ProductCard = (props) => {
         <div className="product-img-container">
           <img
             className="product-img"
-            src={require(`../../assets/images/products/${product.image}`).default}
+            src={
+              require(`../../assets/images/products/${product.image}`).default
+            }
             alt={product.name}
           />
         </div>
-        <div className="product-info">
-          <p>{product.name}</p>
-          <p>{product.price}</p>
+        <div className="product-info-container">
+          <div className="product-info">
+            <p className="card-name">{product.name}</p>
+
+            {/* if an item is sold by the UOM, render price/uom, otherwise render just price */}
+            
+            {product.size ? (
+              <p className="card-price">{product.price} </p>
+            ) : (
+              <p className="card-price">
+                {product.price} / {product.uom}
+              </p>
+            )}
+          </div>
+          <div>
+            <Button
+              className="details-btn"
+              name="details"
+              redirectLocation={`/products/${product.id}`}
+            />
+          </div>
         </div>
-        <Button name="details" redirectLocation={`/products/${product.id}`} />
       </div>
     </>
   );
 };
 
 export default ProductCard;
+ 

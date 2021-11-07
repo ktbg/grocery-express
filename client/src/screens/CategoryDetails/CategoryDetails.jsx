@@ -20,10 +20,10 @@ const CategoryDetails = (props) => {
   return (
     <div>
       <header>
-        <h2 className="category-title">{title?.category}</h2>
+        <h2 className="category-headline">{title?.category}</h2>
         <hr />
       </header>
-      <main className="product-card-container">
+      <main>
         <Products categoryId={id} products={products} />
       </main>
     </div>

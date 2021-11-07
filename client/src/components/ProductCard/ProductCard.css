@@ -1,0 +1,59 @@
+/*  ---------- div from Product.jsx ---------- */
+.product-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+  /* margin-left: 12px; */
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid black;
+  width: 200px;
+  height: 225px;
+  margin: 30px;
+  padding: 10px;
+}
+
+.product-img-container {
+  margin: auto 0;
+}
+
+.product-img {
+  height: auto;
+  width: auto;
+  max-width: 100px;
+  max-height: 75px;
+  object-fit: cover;
+}
+
+.product-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto 10%;
+  width: 100%;
+}
+
+.product-info {
+  display: grid;
+  grid-template-columns: 70% 10% 20%;
+  align-items: end;
+  font-size: 12px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.card-name {
+  width: 80%;
+  text-align: left;
+}
+
+.card-price {
+  grid-column-start: 3;
+  text-align: right;
+}
+

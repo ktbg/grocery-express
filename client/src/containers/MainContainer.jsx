@@ -36,7 +36,7 @@ const MainContainer = () => {
     fetchProducts();
   }, []);
 
-  // star rating useEffect to send to the details page
+  //---------- star rating to send to the product details page ------------
   useEffect(() => {
     const fetchStarRatings = async () => {
       const ratingsList = await getAllRatings();

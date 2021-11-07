@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "./ProductCard/ProductCard";
+import './ProductCard/ProductCard.css'
 
 const Products = (props) => {
   const [displayProducts, setDisplayProducts] = useState([]);
@@ -13,13 +14,13 @@ const Products = (props) => {
   }, [categoryId, products]);
 
   return (
-    <>
+    <div className="product-card-container">
       {displayProducts.map((product) => (
         <React.Fragment key={product.id}>
           <ProductCard product={product} />
         </React.Fragment>
       ))}
-    </>
+    </div>
   );
 };
 

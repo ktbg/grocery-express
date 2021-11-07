@@ -7,17 +7,21 @@ nav {
 }
 
 .nav-brand {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-weight: 700;
   font-size: 24px;
 }
 
+.back {
+  cursor: pointer;
+}
+
 .nav-right {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-bottom: 2px;
-  width: 250px;
-  font-family: 'Open Sans', sans-serif;
+  width: 350px;
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
 }
 
@@ -28,7 +32,6 @@ nav {
 .menu-icon {
   display: none;
   margin-right: 20px;
-  
 }
 
 .burger {
@@ -42,11 +45,10 @@ button.invisible {
   box-shadow: none;
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 900px) {
   nav {
     margin-left: 2rem;
   }
-
 
   .menu-icon {
     display: inline-block;

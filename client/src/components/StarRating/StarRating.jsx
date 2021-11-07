@@ -56,14 +56,14 @@ const StarRating = (props) => {
     setNewRating(0);
     setHover(null);
     setActive(false);
-    console.log('rating deleted'); // DUCHESS
   };
 
   return (
     <React.Fragment>
-      {/* resize below */}
-
       <div className="star-container">
+
+        {/* creates stars */}
+
         {[...Array(5)].map((star, index) => {
           const ratingValue = index + 1;
           return (
@@ -88,6 +88,9 @@ const StarRating = (props) => {
         })}
       </div>
       <div className="rating-text-container">
+
+        {/* toggles based on whether a user has an existing rating or is creating a new one */}
+
         {active ? (
           <button className="invisible" onClick={handleDeleteClick}>
             Delete Rating

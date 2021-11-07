@@ -60,7 +60,7 @@ const Nav = (props) => {
 // ----------------- nav item always visible -------------------------------------------------
 
   const alwaysOptions = (
-    <HashLink className="mobile-always" to="/#categories" onClick={()=> setOpen((prevState) => !prevState)}>
+    <HashLink id="mobile-always" to="/#categories" onClick={()=> setOpen((prevState) => !prevState)}>
       Departments
     </HashLink>
   );
@@ -87,8 +87,15 @@ const Nav = (props) => {
         />
       ) : (
         <div className="nav-right">
-          {alwaysOptions}
+          {location.pathname === "/" ? alwaysOptions : (
+            <>
+              <NavLink to="/">Home</NavLink>
+              {alwaysOptions}
+            </>
+          )}
 
+          {/* toggles menu options based on user login status */}
+          
           {currentUser ? (
             <NavLoggedIn handleLogout={handleLogout} setOpen={setOpen} DesktopIcons={DesktopIcons}/>
           ) : (

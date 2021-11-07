@@ -19,7 +19,7 @@ const ProductDetailCard = (props) => {
     handleRatingDelete,
   } = props;
 
-   // filter ratings for this product and user, set to newRating to either
+  // filter ratings for this product and user, set to newRating to either
   // user's rating or 0 if user has not yet rated product
   useEffect(() => {
     if(currentUser){
@@ -37,8 +37,6 @@ const ProductDetailCard = (props) => {
     }
   }, [currentUser, id, ratings]);
 
-  console.log(rating); //DUCHESS)
-
   return (
     <React.Fragment>
       {product.image && (
@@ -55,7 +53,7 @@ const ProductDetailCard = (props) => {
       <div className="details-right">
         <h3 className="details-name">{product?.name}</h3>
 
-        {/* ========== star rating renders if currentUser ============== */}
+        {/* ----------- star rating renders if currentUser -------------- */}
 
         {currentUser ? (
           <div className="rating">
@@ -76,7 +74,7 @@ const ProductDetailCard = (props) => {
 
         <ProductInfo product={product} />
 
-        {/* ======== conditional button name and action dependent on StarRating ======== */}
+        {/* ----------- conditional button name and action dependent on StarRating -------- */}
 
         <div className="bottom-box">
           {currentUser ? (

@@ -21,3 +21,17 @@ button:active {
   width: 229px;
   height: 43px;
 }
+
+button.btn.details-btn {
+  width: 125px;
+  height: 29px;
+  font-size: 12px;
+  margin-top: 8%;
+  padding: 8px;
+}
+
+@media screen and (max-width: 900px){
+  div.browse-btn {
+    text-align: center;
+  }
+}

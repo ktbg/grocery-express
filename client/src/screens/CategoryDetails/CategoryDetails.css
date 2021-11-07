@@ -1,9 +1,21 @@
 hr {
   width: 90%;
   margin: 40px auto;
+  background-color: black;
+  height: 1px;
+  border: none;
 }
-
 
 .mobile {
   display: none;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.category-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
 }

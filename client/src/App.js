@@ -46,6 +46,7 @@ function App() {
     setCurrentUser(null);
     localStorage.removeItem("authToken");
     removeToken();
+    setIncorrectLogin(false);
     history.push("/");
   };
 

@@ -65,7 +65,7 @@ Client (Front End)
 | React Router   | _Declarative routing for React_                              |
 | React Router Hash Link   | _Package allowing scrolling to hash fragments in links_ |
 | Material Icons  | _Ready to use React icons_                                   |
-| Styled Components  | _Styling library using tagged template literals and CSS_ |
+| React Transition Group  | _CSS Transition handler for React components_ |
 | Axios       | _Promise based HTTP client for the browser and node.js_      |
 | Ruby on Rails   | _Server-side MVC framework used for the back end_            |
 | bcrypt       | _A simple wrapper for safely hashing and handling passwords_ |
@@ -77,6 +77,8 @@ Client (Front End)
 ### Client (Front End)
 
 #### Wireframes
+
+These wireframes include MVP and postMVP designs. Information on which items are postMVP can be found in the [ERD Model](#erd-model). 
 
 - Desktop Landing
 
@@ -116,23 +118,26 @@ Client (Front End)
 src
 |__ assets/
       |__ product_images
-          |__ produce
-          |__ meat
-          |__ seafood
-          |__ frozen
-          |__ grocery
-          |__ dairy
+          |__ Produce
+          |__ Meat
+          |__ Seafood
+          |__ Frozen
+          |__ Grocery
+          |__ Dairy
 |__ components/
+      |__ Burger.jsx
       |__ Button.jsx
       |__ CategoryBox
       |__ Footer.jsx
+      |__ Menu.jsx
       |__ Navbar
           |__ Nav.jsx
           |__ NavLoggedIn.jsx
           |__ NavLoggedOut.jsx
-          |__ Burger.jsx
-          |__ Menu.jsx
+      |__ Product.jsx
       |__ ProductCard.jsx
+      |__ ProductDetailCard.jsx
+      |__ ProductDetailsButton.jsx
       |__ StarRating.jsx
 |__ containers/
       |__ MainContainer.jsx
@@ -146,6 +151,7 @@ src
       |__ Layout.jsx
 |__ services/
       |__ api-config.js
+      |__ auth.js
       |__ categories.js
       |__ products.js
       |__ star-ratings.js
@@ -163,20 +169,20 @@ src
 | React file structure         |    H     |     2 hrs      |    2 hrs     |  
 | React screens                |    H     |     4 hrs      |    2 hrs     | 
 | React components           |    H     |     8 hrs      |    6 hrs     |         
-| Front End user auth          |    H     |     2 hrs      |    1 hr     |         
-| Front product rendering      |    H     |     1 hrs      |         |          
-| Star rating CRUD logic       |    H     |     3 hrs      |         |          
-| Back-end Route testing       |    H     |     .5 hrs      |         |          
-| Front-end Route testing      |    H     |     .5 hrs      |    2 hr   |          
-| CSS products page            |    H     |     2 hrs      |         |          
+| Front end user auth          |    H     |     2 hrs      |    1 hr     |         
+| Front end product rendering      |    H     |     1 hrs      |   4 hrs      |          
+| Star rating CRUD logic       |    H     |     3 hrs      |    4 hrs     |          
+| Back-end Route testing       |    H     |     .5 hrs      |    .5 hrs     |          
+| Front-end Route testing      |    H     |     .5 hrs      |    2 hr s  |          
+| CSS products page            |    H     |     2 hrs      |     4 hrs    |          
 | CSS details page            |    H     |     2 hrs      |         |          
-| CSS user forms pages        |    H     |     4 hrs      |         |          
-| CSS home page                |    H     |     4 hrs      |         |          
+| CSS user forms pages        |    H     |     4 hrs      |    2 hrs     |          
+| CSS home page                |    H     |     4 hrs      |    6 hrs    |          
 | Shopping cart render logic   |    L   |     3 hrs      |         |          
 | Shopping cart add logic      |    L   |     1 hrs      |         |          
 | Shopping cart edit logic      |    L   |     5 hrs      |         |          
 | Shopping cart nav logic       |    L     |     3 hrs      |         |          
-| TOTAL                        |          |     54 hrs      |    23 hrs     |         
+| TOTAL                        |          |     54 hrs      |    43.5 hrs     |         
 
 <br>
 
@@ -201,8 +207,42 @@ src
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+#### Star Ratings
+
+I chose to code this piece by hand versus installing a library to further my learning. The code idea came from [this YouTube video by Eric Murphy](https://www.youtube.com/watch?v=eDw46GYAIDQ). I chose to use an MUI star component instead of Font Awesome to better match the design aesthetic and also to get some practice with MUI icons which were new to me for this project. 
+
+```jsx
+ {[...Array(5)].map((star, index) => {
+      const ratingValue = index + 1;
+      return (
+            <label key={index}>
+            <input
+            type="radio"
+            name="rating"
+            value={ratingValue}
+            onClick={(e) => handleClick(e)}
+            />
+            <StarRateIcon
+            sx={{
+            color:
+                  ratingValue <= (hover || newRating) ? "red" : "#C4C4C4",
+            }}
+            ratingValue={ratingValue}
+            onMouseEnter={() => active && setHover(ratingValue)}
+            onMouseLeave={() => active && setHover(null)}
+            />
+            </label>
+      );
+})}
+```
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+#### Images did not render from assets folder
+
+- _used `<img src={require(asset pathname).default}>` to successfully render in the CategoryDetails.jsx component_
+
+#### Star ratings did not load initial user rating if it existed, delete did not show corrected rating on screen
+
+- _examined state through the StarRating.jsx and ProductDetailCard.jsx finding state was set in ProductDetailCard.jsx useEffect before the StarRating.jsx handleClick_
+- _changed from using a formData state to creating a data object based on available state to pass to the create and update functions without waiting for a state update within the component, instead triggering a state change in the higher level component (MainContainer.jsx), re-rendering the StarRatings.jsx component to correctly show the user rating_
