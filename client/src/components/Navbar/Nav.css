@@ -47,6 +47,7 @@ button.invisible {
 @media screen and (max-width: 900px) {
   nav {
     margin-left: 2rem;
+    align-items: flex-start;
   }
 
   .sign-out-mobile {

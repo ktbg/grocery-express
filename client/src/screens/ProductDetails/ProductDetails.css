@@ -68,7 +68,7 @@
   .details-right {
     margin: 0 auto;
     padding-top: 75px;
-    padding-left: 30px;
+    padding-left: 100px;
     width: 55%;
   }
 }
@@ -76,8 +76,8 @@
 @media screen and (max-width: 629px) {
   .details-right {
     padding-top: 50px;
-    padding-left: 0px;
-    width: 90%;
+    margin: 0 auto;
+    width: 60%;
   }
 
   .details-img {
@@ -93,5 +93,11 @@
   .size,
   .price {
     font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .details-right {
+    padding-left: 10px;
   }
 }
