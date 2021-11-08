@@ -66,17 +66,20 @@
   }
 
   .details-right {
-    margin: 0 auto;
-    padding-top: 75px;
-    padding-left: 100px;
+    margin: 75px auto;
     width: 55%;
   }
 }
 
-@media screen and (max-width: 629px) {
+@media screen and (max-width: 756px) {
+  .details-right {
+    padding-left: 50px;
+  }
+}
+
+@media screen and (max-width: 665px) {
   .details-right {
     padding-top: 50px;
-    margin: 0 auto;
     width: 60%;
   }
 
