@@ -6,7 +6,6 @@ import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import HomeIcon from "@mui/icons-material/Home";
 import "./Menu.css";
 import React from "react";
-import Home from "@mui/icons-material/Home";
 
 const Menu = (props) => {
   const { currentUser, alwaysOptions, handleLogout, setOpen } = props;
