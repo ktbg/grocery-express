@@ -21,7 +21,7 @@
 
 **Grocery Express** is an online marketplace providing a platform for users to view and rate foods. 
 
-[Grocery Express Live Site](https://grocery-express.netlify.app/)
+[Grocery Express Live Demo](https://grocery-express.netlify.app/)
 <br>
 
 ## MVP
@@ -56,8 +56,6 @@ Client (Front End)
 <br>
 
 ### Libraries and Dependencies
-
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
 
 |     Library      | Description                                                  |
 | :--------------: | :----------------------------------------------------------- |
@@ -175,14 +173,14 @@ src
 | Back-end Route testing       |    H     |     .5 hrs      |    .5 hrs     |          
 | Front-end Route testing      |    H     |     .5 hrs      |    2 hr s  |          
 | CSS products page            |    H     |     2 hrs      |     4 hrs    |          
-| CSS details page            |    H     |     2 hrs      |         |          
+| CSS details page            |    H     |     2 hrs      |       8  |          
 | CSS user forms pages        |    H     |     4 hrs      |    2 hrs     |          
 | CSS home page                |    H     |     4 hrs      |    6 hrs    |          
 | Shopping cart render logic   |    L   |     3 hrs      |         |          
 | Shopping cart add logic      |    L   |     1 hrs      |         |          
 | Shopping cart edit logic      |    L   |     5 hrs      |         |          
 | Shopping cart nav logic       |    L     |     3 hrs      |         |          
-| TOTAL                        |          |     54 hrs      |    43.5 hrs     |         
+| TOTAL                        |          |     54 hrs      |    51.5 hrs     |         
 
 <br>
 
