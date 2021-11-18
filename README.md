@@ -173,7 +173,7 @@ src
 | Back-end Route testing       |    H     |     .5 hrs      |    .5 hrs     |          
 | Front-end Route testing      |    H     |     .5 hrs      |    2 hr s  |          
 | CSS products page            |    H     |     2 hrs      |     4 hrs    |          
-| CSS details page            |    H     |     2 hrs      |       8  |          
+| CSS details page            |    H     |     2 hrs      |       8 hrs |          
 | CSS user forms pages        |    H     |     4 hrs      |    2 hrs     |          
 | CSS home page                |    H     |     4 hrs      |    6 hrs    |          
 | Shopping cart render logic   |    L   |     3 hrs      |         |          
